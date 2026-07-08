@@ -1,0 +1,1223 @@
+/* ==========================================
+   GOOGLE FONT
+========================================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ==========================================
+   RESET
+========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    background: linear-gradient(180deg, #020617, #07152f, #081126);
+
+    color: white;
+
+    overflow-x: hidden;
+
+    min-height: 100vh;
+
+    position: relative;
+
+}
+
+/* ==========================================
+   STARS
+========================================== */
+
+.stars {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: -3;
+
+    background-image:
+        radial-gradient(white 1px, transparent 1px),
+        radial-gradient(#ffffff88 1px, transparent 1px),
+        radial-gradient(#ffffff55 1px, transparent 1px);
+
+    background-size:
+        120px 120px,
+        180px 180px,
+        250px 250px;
+
+    animation: starsMove 80s linear infinite;
+
+}
+
+@keyframes starsMove {
+
+    from {
+
+        transform: translateY(0);
+
+    }
+
+    to {
+
+        transform: translateY(-300px);
+
+    }
+
+}
+
+/* ==========================================
+   FLOWER & PARTICLES (kosong dulu)
+========================================== */
+
+#flowers {
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    z-index: -2;
+
+}
+
+#particles {
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    z-index: -1;
+
+}
+
+/* ==========================================
+   OPENING
+========================================== */
+
+#opening {
+
+    position: fixed;
+
+    inset: 0;
+
+    background: #020611;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    z-index: 9999;
+
+    transition: 1.2s;
+
+}
+
+.opening-content {
+
+    text-align: center;
+
+    width: 90%;
+
+    max-width: 700px;
+
+}
+
+.opening-content h1 {
+
+    font-size: 58px;
+
+    line-height: 1.3;
+
+    margin-bottom: 20px;
+
+    text-shadow: 0 0 18px #ff7ac7;
+
+}
+
+.opening-content p {
+
+    color: #dddddd;
+
+    font-size: 20px;
+
+    margin-bottom: 40px;
+
+}
+
+/* ==========================================
+   BUTTON
+========================================== */
+
+button {
+
+    padding: 18px 45px;
+
+    border: none;
+
+    border-radius: 50px;
+
+    background: linear-gradient(45deg, #ff4f9b, #ff7ed8);
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    transition: .35s;
+
+    box-shadow:
+
+        0 0 25px rgba(255, 105, 180, .4);
+
+}
+
+button:hover {
+
+    transform: translateY(-5px) scale(1.05);
+
+    box-shadow:
+
+        0 0 40px rgba(255, 105, 180, .8);
+
+}
+
+/* ==========================================
+   HOME
+========================================== */
+
+.container {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-direction: column;
+
+    text-align: center;
+
+    padding: 40px;
+
+}
+
+.title {
+
+    font-size: 70px;
+
+    margin-bottom: 20px;
+
+    text-shadow: 0 0 20px #ff66c4;
+
+}
+
+.subtitle {
+
+    font-size: 22px;
+
+    color: #dddddd;
+
+    margin-bottom: 45px;
+
+}
+
+/* ==========================================
+   LETTER
+========================================== */
+
+.letter {
+
+    width: 90%;
+
+    max-width: 950px;
+
+    margin: 80px auto;
+
+    padding: 60px;
+
+    border-radius: 30px;
+
+    background: rgba(255, 255, 255, .08);
+
+    backdrop-filter: blur(16px);
+
+    box-shadow: 0 0 30px rgba(255, 255, 255, .1);
+
+}
+
+.hidden {
+
+    display: none;
+
+}
+
+.letter h2 {
+
+    text-align: center;
+
+    font-size: 42px;
+
+    margin-bottom: 35px;
+
+}
+
+.typing {
+
+    font-size: 20px;
+
+    line-height: 2;
+
+    text-align: center;
+
+}
+
+/* ==========================================
+   GALLERY
+========================================== */
+
+.gallery {
+
+    margin-top: 60px;
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 20px;
+
+}
+
+.gallery img {
+
+    width: 100%;
+
+    height: 300px;
+
+    object-fit: cover;
+
+    border-radius: 18px;
+
+    transition: .4s;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .4);
+
+}
+
+.gallery img:hover {
+
+    transform: scale(1.05);
+
+}
+
+/* ==========================================
+   FLOATING HEART
+========================================== */
+
+.heart {
+
+    position: fixed;
+
+    top: -40px;
+
+    pointer-events: none;
+
+    animation: heartFall linear forwards;
+
+    z-index: 999;
+
+}
+
+@keyframes heartFall {
+
+    from {
+
+        transform: translateY(-50px) rotate(0deg);
+
+        opacity: 1;
+
+    }
+
+    to {
+
+        transform: translateY(110vh) rotate(360deg);
+
+        opacity: 0;
+
+    }
+
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:768px) {
+
+    .title {
+
+        font-size: 42px;
+
+    }
+
+    .subtitle {
+
+        font-size: 18px;
+
+    }
+
+    .opening-content h1 {
+
+        font-size: 38px;
+
+    }
+
+    .opening-content p {
+
+        font-size: 18px;
+
+    }
+
+    .letter {
+
+        padding: 35px 25px;
+
+    }
+
+    .typing {
+
+        font-size: 18px;
+
+    }
+
+    .gallery img {
+
+        height: 220px;
+
+    }
+
+}
+
+/* ==========================================
+   OPENING FADE
+========================================== */
+
+.fade-out {
+
+    opacity: 0;
+
+    visibility: hidden;
+
+}
+
+/* ==========================================
+   LETTER ANIMATION
+========================================== */
+
+.letter {
+
+    animation: fadeUp 1s ease;
+
+}
+
+@keyframes fadeUp {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(80px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+/* ==========================================
+   MOON
+========================================== */
+
+.moon {
+
+    position: fixed;
+
+    width: 140px;
+
+    height: 140px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    top: 70px;
+
+    right: 80px;
+
+    box-shadow:
+        0 0 30px white,
+        0 0 60px white,
+        0 0 120px rgba(255, 255, 255, .6);
+
+    animation: moonGlow 4s ease-in-out infinite;
+
+    z-index: -2;
+
+}
+
+@keyframes moonGlow {
+
+    0% {
+
+        transform: scale(1);
+
+    }
+
+    50% {
+
+        transform: scale(1.08);
+
+    }
+
+    100% {
+
+        transform: scale(1);
+
+    }
+
+}
+
+@media(max-width:768px) {
+
+    .moon {
+
+        width: 90px;
+
+        height: 90px;
+
+        right: 20px;
+
+        top: 40px;
+
+    }
+
+}
+
+.stars {
+
+    animation:
+        starsMove 80s linear infinite,
+        starsBlink 3s ease-in-out infinite;
+
+}
+
+@keyframes starsBlink {
+
+    0% {
+
+        opacity: .6;
+
+    }
+
+    50% {
+
+        opacity: 1;
+
+    }
+
+    100% {
+
+        opacity: .6;
+
+    }
+
+}
+
+/* ==========================================
+   PARTICLES
+========================================== */
+
+.particle {
+
+    position: fixed;
+
+    width: 5px;
+
+    height: 5px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    box-shadow: 0 0 15px white;
+
+    animation: particleMove linear forwards;
+
+    pointer-events: none;
+
+    z-index: -1;
+
+}
+
+@keyframes particleMove {
+
+    from {
+
+        transform: translateY(0);
+
+        opacity: 1;
+
+    }
+
+    to {
+
+        transform: translateY(-150px);
+
+        opacity: 0;
+
+    }
+
+}
+
+/* ==========================================
+   AURORA
+========================================== */
+
+.aurora {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: -4;
+
+    background:
+        radial-gradient(circle at 20% 20%, rgba(0, 255, 170, .12), transparent 35%),
+        radial-gradient(circle at 80% 30%, rgba(0, 170, 255, .10), transparent 35%),
+        radial-gradient(circle at 50% 80%, rgba(255, 0, 180, .08), transparent 45%);
+
+    filter: blur(60px);
+
+    animation: auroraMove 15s ease-in-out infinite alternate;
+
+}
+
+@keyframes auroraMove {
+
+    from {
+
+        transform: translateX(-60px);
+
+    }
+
+    to {
+
+        transform: translateX(60px);
+
+    }
+
+}
+
+/* ==========================================
+   FIREFLIES
+========================================== */
+
+.firefly {
+
+    position: fixed;
+
+    width: 6px;
+
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: #ffe96d;
+
+    box-shadow: 0 0 20px #ffe96d;
+
+    pointer-events: none;
+
+    animation: fly linear forwards;
+
+}
+
+@keyframes fly {
+
+    from {
+
+        transform: translateY(40px);
+
+        opacity: 0;
+
+    }
+
+    20% {
+
+        opacity: 1;
+
+    }
+
+    to {
+
+        transform: translateY(-200px);
+
+        opacity: 0;
+
+    }
+
+}
+
+/* ==========================================
+   LOADING SCREEN
+========================================== */
+
+#loading {
+
+    position: fixed;
+
+    inset: 0;
+
+    background: #020611;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-direction: column;
+
+    z-index: 99999;
+
+    transition: 1s;
+
+}
+
+.loader-heart {
+
+    font-size: 70px;
+
+    animation: heartbeat 1s infinite;
+
+}
+
+#loading p {
+
+    margin-top: 20px;
+
+    color: white;
+
+    letter-spacing: 2px;
+
+}
+
+@keyframes heartbeat {
+
+    0% {
+
+        transform: scale(1);
+
+    }
+
+    50% {
+
+        transform: scale(1.25);
+
+    }
+
+    100% {
+
+        transform: scale(1);
+
+    }
+
+}
+
+/* ==========================================
+   OPENING IMPROVEMENT
+========================================== */
+
+.welcome {
+
+    display: inline-block;
+
+    padding: 10px 25px;
+
+    border-radius: 30px;
+
+    background: rgba(255, 255, 255, .1);
+
+    border: 1px solid rgba(255, 255, 255, .2);
+
+    margin-bottom: 25px;
+
+    backdrop-filter: blur(10px);
+
+    color: #ffd4f3;
+
+}
+
+.opening-content {
+
+    animation: fadeOpening 1.5s ease;
+
+}
+
+.opening-content h1 {
+
+    font-size: 64px;
+
+    margin-bottom: 20px;
+
+    text-shadow: 0 0 20px #ff74c8;
+
+}
+
+.opening-content p {
+
+    max-width: 650px;
+
+    margin: auto;
+
+    color: #d7d7d7;
+
+    line-height: 1.8;
+
+    margin-bottom: 40px;
+
+}
+
+@keyframes fadeOpening {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(80px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+/* ==========================================
+   HERO
+========================================== */
+
+.hero {
+
+    max-width: 850px;
+
+    margin: auto;
+
+}
+
+.tag {
+
+    display: inline-block;
+
+    padding: 8px 20px;
+
+    border-radius: 30px;
+
+    background: rgba(255, 255, 255, .08);
+
+    margin-bottom: 30px;
+
+    border: 1px solid rgba(255, 255, 255, .15);
+
+}
+
+.title {
+
+    font-size: 72px;
+
+    font-weight: 700;
+
+    text-shadow:
+
+        0 0 20px #ff69b4,
+
+        0 0 50px #ff69b4;
+
+}
+
+.subtitle {
+
+    font-size: 22px;
+
+    color: #d8d8d8;
+
+    line-height: 2;
+
+    max-width: 700px;
+
+    margin: auto;
+
+    margin-bottom: 45px;
+
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+footer {
+
+    text-align: center;
+
+    padding: 40px;
+
+    color: #999;
+
+    font-size: 15px;
+
+}
+
+/* ==========================================
+   MUSIC BUTTON
+========================================== */
+
+#musicBtn {
+
+    position: fixed;
+
+    bottom: 30px;
+
+    right: 30px;
+
+    width: 60px;
+
+    height: 60px;
+
+    border-radius: 50%;
+
+    border: none;
+
+    cursor: pointer;
+
+    font-size: 24px;
+
+    z-index: 999;
+
+}
+
+.letter {
+
+    width: 90%;
+
+    max-width: 900px;
+
+    margin: 120px auto;
+
+    padding: 60px;
+
+    border-radius: 35px;
+
+    background: rgba(255, 255, 255, .08);
+
+    border: 1px solid rgba(255, 255, 255, .15);
+
+    backdrop-filter: blur(18px);
+
+    -webkit-backdrop-filter: blur(18px);
+
+    box-shadow:
+        0 10px 40px rgba(0, 0, 0, .4),
+        inset 0 0 30px rgba(255, 255, 255, .05);
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+.letter::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+
+    height: 300px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, .08);
+
+    top: -120px;
+
+    right: -120px;
+
+    filter: blur(50px);
+
+}
+
+.letter::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 220px;
+
+    height: 220px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 120, 180, .15);
+
+    bottom: -100px;
+
+    left: -80px;
+
+    filter: blur(60px);
+
+}
+
+/* ==========================================
+   SLIDER
+========================================== */
+
+.slider {
+
+    position: relative;
+
+    width: 100%;
+
+    max-width: 750px;
+
+    margin: 60px auto;
+
+}
+
+/* Container Slide */
+
+.slides {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 420px;
+
+    overflow: hidden;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 10px 40px rgba(0, 0, 0, .4);
+
+    background: rgba(255, 255, 255, .05);
+
+}
+
+/* Gambar */
+
+.slide {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: none;
+
+    border-radius: 25px;
+
+    transition: opacity .5s ease;
+
+}
+
+.slide.active {
+
+    display: block;
+
+    animation: fadeSlide .8s ease;
+
+}
+
+/* Animasi Fade */
+
+@keyframes fadeSlide {
+
+    from {
+
+        opacity: 0;
+
+        transform: scale(1.03);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: scale(1);
+
+    }
+
+}
+
+/* Tombol */
+
+.prev,
+.next {
+
+    position: absolute;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 55px;
+
+    height: 55px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, .25);
+
+    backdrop-filter: blur(10px);
+
+    color: white;
+
+    font-size: 24px;
+
+    cursor: pointer;
+
+    z-index: 100;
+
+    transition: .3s;
+
+}
+
+.prev {
+
+    left: 15px;
+
+}
+
+.next {
+
+    right: 15px;
+
+}
+
+.prev:hover,
+.next:hover {
+
+    background: rgba(255, 255, 255, .45);
+
+    transform: translateY(-50%) scale(1.1);
+
+}
+
+/* Dot */
+
+.dots {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 25px;
+
+}
+
+.dot {
+
+    width: 12px;
+
+    height: 12px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, .35);
+
+    transition: .3s;
+
+}
+
+.dot.active {
+
+    width: 32px;
+
+    border-radius: 30px;
+
+    background: #ffffff;
+
+}
+
+/* Responsive */
+
+@media (max-width:768px) {
+
+    .slider {
+
+        max-width: 100%;
+
+    }
+
+    .slides {
+
+        height: 280px;
+
+    }
+
+    .prev,
+    .next {
+
+        width: 45px;
+
+        height: 45px;
+
+        font-size: 20px;
+
+    }
+
+}
