@@ -1,0 +1,536 @@
+/* ==========================================
+   HERO SECTION
+========================================== */
+
+#home {
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 120px 20px 80px;
+
+    position: relative;
+    z-index: 2;
+
+}
+
+/* ==========================================
+   HERO CONTAINER
+========================================== */
+
+.hero-container {
+
+    width: 100%;
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/* ==========================================
+   HERO CARD
+========================================== */
+
+.hero {
+
+    position: relative;
+
+    isolation: isolate;
+
+    overflow: hidden;
+
+    width: min(920px, 95%);
+
+    padding: 70px 60px;
+
+    text-align: center;
+
+    border-radius: 35px;
+
+    background: rgba(255, 255, 255, .08);
+
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    border: 1px solid rgba(255, 255, 255, .15);
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, .35);
+
+    cursor: default;
+
+    transition:
+        transform .45s ease,
+        box-shadow .45s ease,
+        border-color .45s ease;
+
+    animation: heroFade 1.2s ease forwards;
+
+}
+
+/* ==========================================
+   HERO HOVER
+========================================== */
+
+.hero:hover {
+
+    transform: translateY(-8px);
+
+    border-color: rgba(255, 255, 255, .25);
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, .45);
+
+}
+
+/* ==========================================
+   GLOW EFFECT
+========================================== */
+
+.hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 380px;
+    height: 380px;
+
+    top: -170px;
+    left: -170px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 92, 138, .30);
+
+    filter: blur(130px);
+
+    z-index: -1;
+
+    animation: glowMove 10s ease-in-out infinite alternate;
+
+}
+
+.hero::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 320px;
+    height: 320px;
+
+    right: -150px;
+    bottom: -150px;
+
+    border-radius: 50%;
+
+    background: rgba(125, 139, 255, .25);
+
+    filter: blur(130px);
+
+    z-index: -1;
+
+    animation: glowMove2 12s ease-in-out infinite alternate;
+
+}
+
+/* ==========================================
+   TAG
+========================================== */
+
+.tag {
+
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 12px 25px;
+
+    margin-bottom: 30px;
+
+    border-radius: 999px;
+
+    background: rgba(255, 255, 255, .12);
+
+    border: 1px solid rgba(255, 255, 255, .18);
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    letter-spacing: .5px;
+
+    transition: .35s ease;
+
+    animation: heartbeat 2.2s infinite;
+
+}
+
+.tag:hover {
+
+    transform: translateY(-3px);
+
+    background: rgba(255, 255, 255, .18);
+
+}
+
+/* ==========================================
+   TITLE
+========================================== */
+
+.hero-title {
+
+    margin-bottom: 25px;
+
+    font-size: 64px;
+
+    font-weight: 800;
+
+    line-height: 1.2;
+
+    letter-spacing: -1px;
+
+    background: linear-gradient(90deg,
+            #ffffff,
+            #ffd6e4,
+            #ffffff);
+
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+
+    text-shadow: 0 5px 25px rgba(255, 255, 255, .18);
+
+}
+
+/* ==========================================
+   SUBTITLE
+========================================== */
+
+.hero-subtitle {
+
+    max-width: 650px;
+
+    margin: auto;
+
+    font-size: 18px;
+
+    line-height: 1.9;
+
+    letter-spacing: .3px;
+
+    color: rgba(255, 255, 255, .92);
+
+}
+
+/* ==========================================
+   BUTTON AREA
+========================================== */
+
+.hero-buttons {
+
+    margin-top: 45px;
+
+}
+
+/* ==========================================
+   BUTTON
+========================================== */
+
+.primary-btn {
+
+    position: relative;
+
+    overflow: hidden;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    padding: 18px 46px;
+
+    border: none;
+
+    border-radius: 999px;
+
+    background: linear-gradient(135deg,
+            #ff5c8a,
+            #ff8fb3);
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+
+}
+
+.primary-btn::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -150%;
+
+    width: 60%;
+    height: 100%;
+
+    background: rgba(255, 255, 255, .35);
+
+    transform: skewX(-25deg);
+
+    transition: left .9s ease;
+
+}
+
+.primary-btn:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 15px 45px rgba(255, 92, 138, .45);
+
+}
+
+.primary-btn:hover::before {
+
+    left: 160%;
+
+}
+
+/* ==========================================
+   SCROLL INDICATOR
+========================================== */
+
+.scroll-indicator {
+
+    margin-top: 60px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 15px;
+
+    color: rgba(255, 255, 255, .75);
+
+    font-size: 14px;
+
+}
+
+.mouse {
+
+    width: 34px;
+    height: 55px;
+
+    border: 2px solid rgba(255, 255, 255, .70);
+
+    border-radius: 30px;
+
+    display: flex;
+    justify-content: center;
+
+    padding-top: 8px;
+
+}
+
+.wheel {
+
+    width: 5px;
+    height: 12px;
+
+    border-radius: 999px;
+
+    background: white;
+
+    animation: scrollWheel 2s infinite;
+
+}
+
+/* ==========================================
+   ANIMATION
+========================================== */
+
+@keyframes heroFade {
+
+    from {
+
+        opacity: 0;
+        transform: translateY(60px);
+
+    }
+
+    to {
+
+        opacity: 1;
+        transform: translateY(0);
+
+    }
+
+}
+
+@keyframes heartbeat {
+
+    0%,
+    100% {
+
+        transform: scale(1);
+
+    }
+
+    50% {
+
+        transform: scale(1.08);
+
+    }
+
+}
+
+@keyframes scrollWheel {
+
+    0% {
+
+        transform: translateY(0);
+        opacity: 1;
+
+    }
+
+    100% {
+
+        transform: translateY(18px);
+        opacity: 0;
+
+    }
+
+}
+
+@keyframes glowMove {
+
+    from {
+
+        transform: translate(0, 0);
+
+    }
+
+    to {
+
+        transform: translate(70px, 50px);
+
+    }
+
+}
+
+@keyframes glowMove2 {
+
+    from {
+
+        transform: translate(0, 0);
+
+    }
+
+    to {
+
+        transform: translate(-50px, -40px);
+
+    }
+
+}
+
+/* ==========================================
+   RESPONSIVE TABLET
+========================================== */
+
+@media (max-width:768px) {
+
+    #home {
+
+        padding: 100px 20px 60px;
+
+    }
+
+    .hero {
+
+        padding: 45px 25px;
+
+    }
+
+    .hero-title {
+
+        font-size: 42px;
+
+    }
+
+    .hero-subtitle {
+
+        font-size: 16px;
+
+        line-height: 1.8;
+
+    }
+
+    .primary-btn {
+
+        width: 100%;
+
+    }
+
+}
+
+/* ==========================================
+   RESPONSIVE MOBILE
+========================================== */
+
+@media (max-width:480px) {
+
+    #home {
+
+        padding: 80px 15px 50px;
+
+    }
+
+    .hero {
+
+        padding: 30px 20px;
+
+    }
+
+    .hero-title {
+
+        font-size: 30px;
+
+    }
+
+    .hero-subtitle {
+
+        font-size: 15px;
+
+    }
+
+    .tag {
+
+        font-size: 12px;
+
+    }
+
+}

@@ -1,0 +1,93 @@
+/* ==========================================
+   LOADING
+========================================== */
+
+#loading {
+
+    position: fixed;
+
+    inset: 0;
+
+    background: #090b18;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    z-index: 9999;
+
+}
+
+.loading-content {
+
+    text-align: center;
+
+    width: min(420px, 90%);
+
+}
+
+.loader-heart {
+
+    font-size: 70px;
+
+    animation: heartbeat 1.2s infinite;
+
+}
+
+.loading-title {
+
+    margin-top: 20px;
+
+    font-size: 30px;
+
+    font-weight: 700;
+
+}
+
+.loading-subtitle {
+
+    margin-top: 15px;
+
+    color: #ddd;
+
+}
+
+.loading-progress {
+
+    width: 100%;
+
+    height: 8px;
+
+    background: rgba(255, 255, 255, .15);
+
+    border-radius: 50px;
+
+    overflow: hidden;
+
+    margin-top: 35px;
+
+}
+
+.loading-bar {
+
+    width: 0%;
+
+    height: 100%;
+
+    background: linear-gradient(90deg, #ff5c8a, #ff9fba);
+
+    border-radius: 50px;
+
+}
+
+.loading-percent {
+
+    display: block;
+
+    margin-top: 18px;
+
+    font-weight: 600;
+
+}

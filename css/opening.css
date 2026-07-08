@@ -1,0 +1,99 @@
+/* ==========================================
+   OPENING
+========================================== */
+
+#opening {
+
+    position: fixed;
+
+    inset: 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    z-index: 1000;
+
+}
+
+.opening-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    backdrop-filter: blur(8px);
+
+}
+
+.opening-container {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: min(700px, 90%);
+
+}
+
+.welcome {
+
+    display: inline-block;
+
+    padding: 10px 20px;
+
+    background: rgba(255, 255, 255, .15);
+
+    border-radius: 999px;
+
+    margin-bottom: 25px;
+
+}
+
+.opening-title {
+
+    font-size: 54px;
+
+    line-height: 1.2;
+
+}
+
+.opening-subtitle {
+
+    margin: 25px auto;
+
+    max-width: 600px;
+
+    color: #eee;
+
+}
+
+.primary-btn {
+
+    padding: 18px 45px;
+
+    border: none;
+
+    border-radius: 50px;
+
+    background: #ff5c8a;
+
+    color: white;
+
+    font-size: 18px;
+
+    transition: .3s;
+
+}
+
+.primary-btn:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 12px 35px rgba(255, 92, 138, .45);
+
+}
