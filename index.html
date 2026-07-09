@@ -8,16 +8,43 @@
     =========================================== -->
 
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Website spesial yang dibuat dengan penuh cinta ❤️">
+
+    <meta name="description"
+        content="Website spesial yang dibuat dengan penuh cinta untuk seseorang yang paling berarti ❤️">
+
     <meta name="author" content="Raihan Ramdhani">
+
+    <meta name="keywords" content="Love, Romantic Website, Our Story, Anniversary, Love Letter">
+
     <meta name="theme-color" content="#ff5c8a">
+
+    <meta name="color-scheme" content="dark">
+
+    <!-- ==========================================
+         OPEN GRAPH (WhatsApp & Facebook)
+    =========================================== -->
+
+    <meta property="og:title" content="❤️ Our Story ❤️">
+
+    <meta property="og:description" content="Website spesial yang kubuat hanya untukmu ❤️">
+
+    <meta property="og:type" content="website">
+
+    <meta property="og:image" content="images/photo1.jpeg">
 
     <!-- ==========================================
          TITLE
     =========================================== -->
 
     <title>❤️ Our Story ❤️</title>
+
+    <!-- ==========================================
+         FAVICON
+    =========================================== -->
+
+    <link rel="icon" href="images/favicon.png" type="image/png">
 
     <!-- ==========================================
          GOOGLE FONT
@@ -30,7 +57,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
 
-    <!-- CSS -->
+    <!-- ==========================================
+         CSS
+    =========================================== -->
+
     <link rel="stylesheet" href="css/style.css">
 
 </head>
@@ -38,18 +68,24 @@
 <body>
 
     <!-- ==========================================
-         LOADING SCREEN
-    =========================================== -->
+     LOADING SCREEN
+========================================== -->
 
-    <div id="loading">
+    <div id="loading" class="loading-screen" role="status" aria-live="polite">
 
         <div class="loading-content">
 
-            <div class="loader-heart">
+            <!-- Heart Animation -->
 
-                ❤️
+            <div class="loader-wrapper" aria-hidden="true">
+
+                <div class="loader-heart">
+                    ❤️
+                </div>
 
             </div>
+
+            <!-- Title -->
 
             <h2 class="loading-title">
 
@@ -57,18 +93,23 @@
 
             </h2>
 
+            <!-- Dynamic Text -->
+
             <p class="loading-subtitle">
 
                 Mohon tunggu sebentar ya sayang 💖
 
             </p>
 
+            <!-- Progress -->
+
             <div class="loading-progress">
-
-                <div class="loading-bar"></div>
-
+                <div class="loading-bar">
+                    <span class="loading-fill"></span>
+                </div>
             </div>
 
+            <!-- Percentage -->
             <span class="loading-percent">
 
                 0%
@@ -79,30 +120,33 @@
 
     </div>
 
-    <!-- ==========================================
-         BACKGROUND
-    =========================================== -->
+    <!-- ================ BACKGROUND ============== -->
 
-    <div id="background">
+    <!-- ==========================================
+     BACKGROUND
+========================================== -->
+
+    <div id="background" aria-hidden="true">
 
         <div class="background-layer">
 
-            <div class="stars"></div>
-
-            <div class="moon"></div>
-
-            <div class="aurora"></div>
-
+            <!-- Stars -->
+            <div id="stars"></div>
+            <!-- Moon -->
+            <div id="moon"></div>
+            <!-- Aurora -->
+            <div id="aurora"></div>
+            <!-- Particles -->
             <div id="particles"></div>
-
+            <!-- Fireflies -->
             <div id="fireflies"></div>
-
+            <!-- Petals -->
             <div id="petals"></div>
-
+            <!-- Sparkles -->
             <div id="sparkles"></div>
-
+            <!-- Shooting Stars -->
             <div id="shootingStars"></div>
-
+            <!-- Flowers -->
             <div id="flowers"></div>
 
         </div>
@@ -856,6 +900,89 @@
         </div>
 
     </div>
+
+    <!-- ================= TIMELINE ================= -->
+
+    <section id="timeline" class="timeline-section">
+
+        <div class="timeline-header">
+
+            <span class="timeline-icon">❤️</span>
+
+            <h2 class="timeline-title">
+                Perjalanan Kita
+            </h2>
+
+            <p class="timeline-subtitle">
+                Semua berawal dari sebuah pertemuan kecil,
+                hingga menjadi cerita yang tak ingin aku akhiri.
+            </p>
+
+        </div>
+
+        <div class="timeline">
+
+            <div class="timeline-item left">
+
+                <div class="timeline-content">
+
+                    <span class="timeline-date">
+                        01 Januari 2025
+                    </span>
+
+                    <h3>Pertama Kali Berkenalan</h3>
+
+                    <p>
+                        Hari dimana semuanya dimulai.
+                        Siapa sangka sebuah sapaan sederhana
+                        bisa menjadi cerita sepanjang ini.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="timeline-item right">
+
+                <div class="timeline-content">
+
+                    <span class="timeline-date">
+                        15 Januari 2025
+                    </span>
+
+                    <h3>Pertama Jalan Bersama</h3>
+
+                    <p>
+                        Hari pertama kita menghabiskan waktu bersama,
+                        penuh tawa dan cerita yang masih kuingat sampai sekarang.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="timeline-item left">
+
+                <div class="timeline-content">
+
+                    <span class="timeline-date">
+                        14 Februari 2025
+                    </span>
+
+                    <h3>Menjadi Kita ❤️</h3>
+
+                    <p>
+                        Sejak hari itu,
+                        aku tahu kalau aku ingin terus berjalan bersamamu.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
 
     <!-- =================== FOOTER ===================== -->
 

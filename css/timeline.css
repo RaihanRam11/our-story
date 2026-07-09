@@ -1,0 +1,377 @@
+/* ==================================================
+   TIMELINE SECTION
+================================================== */
+
+.timeline-section {
+
+    position: relative;
+
+    width: min(1100px, 95%);
+
+    margin: 120px auto;
+
+}
+
+/* ==================================================
+   HEADER
+================================================== */
+
+.timeline-header {
+
+    text-align: center;
+
+    margin-bottom: 70px;
+
+}
+
+.timeline-icon {
+
+    display: inline-block;
+
+    font-size: 60px;
+
+    margin-bottom: 15px;
+
+    animation: heartbeat 2s infinite;
+
+}
+
+.timeline-title {
+
+    font-size: 42px;
+
+    font-weight: 700;
+
+    color: #fff;
+
+    margin-bottom: 15px;
+
+}
+
+.timeline-subtitle {
+
+    max-width: 650px;
+
+    margin: auto;
+
+    color: #d8d8d8;
+
+    line-height: 1.9;
+
+}
+
+/* ==================================================
+   TIMELINE
+================================================== */
+
+.timeline {
+
+    position: relative;
+
+    margin-top: 60px;
+
+}
+
+/* ==================================================
+   CENTER LINE
+================================================== */
+
+.timeline::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 0;
+
+    transform: translateX(-50%);
+
+    width: 4px;
+
+    height: 100%;
+
+    border-radius: 999px;
+
+    background: linear-gradient(to bottom,
+
+            #ff5c8a,
+
+            #ff99bc,
+
+            #ffd6e4);
+
+    box-shadow:
+
+        0 0 25px rgba(255, 92, 138, .55);
+
+}
+
+/* ==================================================
+   ITEM
+================================================== */
+
+.timeline-item {
+
+    position: relative;
+
+    width: 50%;
+
+    padding: 20px 45px;
+
+    margin-bottom: 70px;
+
+}
+
+.timeline-item.left {
+
+    left: 0;
+
+}
+
+.timeline-item.right {
+
+    left: 50%;
+
+}
+
+/* ==================================================
+   HEART DOT
+================================================== */
+
+.timeline-item::before {
+
+    content: "❤";
+
+    position: absolute;
+
+    top: 45px;
+
+    width: 34px;
+
+    height: 34px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #ff5c8a;
+
+    color: white;
+
+    font-size: 16px;
+
+    box-shadow:
+
+        0 0 25px rgba(255, 92, 138, .6);
+
+    z-index: 5;
+
+}
+
+.timeline-item.left::before {
+
+    right: -17px;
+
+}
+
+.timeline-item.right::before {
+
+    left: -17px;
+
+}
+
+/* ==================================================
+   CARD
+================================================== */
+
+.timeline-content {
+
+    position: relative;
+
+    padding: 30px;
+
+    border-radius: 25px;
+
+    background: rgba(255, 255, 255, .08);
+
+    backdrop-filter: blur(18px);
+
+    border: 1px solid rgba(255, 255, 255, .12);
+
+    box-shadow:
+
+        0 20px 45px rgba(0, 0, 0, .30);
+
+    transition: .4s ease;
+
+}
+
+.timeline-content:hover {
+
+    transform: translateY(-10px);
+
+    border-color: rgba(255, 255, 255, .25);
+
+    box-shadow:
+
+        0 30px 60px rgba(0, 0, 0, .45);
+
+}
+
+/* ==================================================
+   DATE
+================================================== */
+
+.timeline-date {
+
+    display: inline-block;
+
+    padding: 8px 16px;
+
+    border-radius: 999px;
+
+    background: linear-gradient(135deg,
+
+            #ff5c8a,
+
+            #ff8fb3);
+
+    color: white;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    margin-bottom: 18px;
+
+}
+
+/* ==================================================
+   TITLE
+================================================== */
+
+.timeline-content h3 {
+
+    font-size: 24px;
+
+    margin-bottom: 15px;
+
+    color: white;
+
+}
+
+/* ==================================================
+   TEXT
+================================================== */
+
+.timeline-content p {
+
+    line-height: 1.9;
+
+    color: #dddddd;
+
+}
+
+/* ==================================================
+   GLOW
+================================================== */
+
+.timeline-content::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 120px;
+
+    height: 120px;
+
+    top: -40px;
+
+    right: -40px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 92, 138, .15);
+
+    filter: blur(60px);
+
+    z-index: -1;
+
+}
+
+/* ==================================================
+   RESPONSIVE TABLET
+================================================== */
+
+@media(max-width:900px) {
+
+    .timeline::before {
+
+        left: 25px;
+
+    }
+
+    .timeline-item {
+
+        width: 100%;
+
+        left: 0 !important;
+
+        padding-left: 70px;
+
+        padding-right: 20px;
+
+    }
+
+    .timeline-item::before {
+
+        left: 8px !important;
+
+    }
+
+}
+
+/* ==================================================
+   RESPONSIVE MOBILE
+================================================== */
+
+@media(max-width:480px) {
+
+    .timeline-section {
+
+        margin: 90px auto;
+
+    }
+
+    .timeline-title {
+
+        font-size: 32px;
+
+    }
+
+    .timeline-subtitle {
+
+        font-size: 15px;
+
+    }
+
+    .timeline-content {
+
+        padding: 22px;
+
+    }
+
+    .timeline-content h3 {
+
+        font-size: 20px;
+
+    }
+
+}
