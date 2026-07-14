@@ -1,6 +1,6 @@
-/* ==========================================
-   BACKGROUND
-========================================== */
+/* ==========================================================
+   BACKGROUND FOUNDATION
+========================================================== */
 
 #background {
 
@@ -8,21 +8,117 @@
 
     inset: 0;
 
-    z-index: -10;
+    width: 100%;
+
+    height: 100vh;
 
     overflow: hidden;
 
+    pointer-events: none;
+
+    z-index: var(--z-background);
+
 }
+
+/* ==========================================================
+   BACKGROUND LAYER
+========================================================== */
 
 .background-layer {
 
-    width: 100%;
+    position: absolute;
 
-    height: 100%;
+    inset: 0;
 
-    position: relative;
+    overflow: hidden;
+
+    background: radial-gradient(circle at top,
+            #241632 0%,
+            #171b2d 35%,
+            #090b18 100%);
 
 }
+
+/* ==========================================================
+   BACKGROUND GLOW
+========================================================== */
+
+.background-layer::before,
+
+.background-layer::after {
+
+    content: "";
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+}
+
+.background-layer::before {
+
+    top: -120px;
+
+    left: -120px;
+
+    width: 420px;
+
+    height: 420px;
+
+    background: rgba(255, 92, 138, .12);
+
+    filter: blur(120px);
+
+    animation: bubbleGlowLeft 18s ease-in-out infinite alternate;
+
+}
+
+.background-layer::after {
+
+    right: -100px;
+
+    bottom: -100px;
+
+    width: 380px;
+
+    height: 380px;
+
+    background: rgba(120, 180, 255, .10);
+
+    filter: blur(120px);
+
+    animation: bubbleGlowRight 20s ease-in-out infinite alternate;
+
+}
+
+/* ==========================================================
+   BACKGROUND OVERLAY
+========================================================== */
+
+#background::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, .05),
+            rgba(0, 0, 0, .15),
+            rgba(0, 0, 0, .30));
+
+}
+
+/* ==========================================================
+   SKY EFFECTS
+========================================================== */
+
+/* ==========================================================
+   STARS
+========================================================== */
 
 .stars {
 
@@ -32,44 +128,506 @@
 
     background-image:
 
-        radial-gradient(white 1px, transparent 1px);
+        radial-gradient(circle, #ffffff 1px, transparent 1px),
 
-    background-size: 40px 40px;
+        radial-gradient(circle, #ffffff 1px, transparent 1px),
 
-    opacity: .35;
+        radial-gradient(circle, #ffffff 1.5px, transparent 1.5px);
+
+    background-size:
+
+        180px 180px,
+
+        260px 260px,
+
+        340px 340px;
+
+    background-position:
+
+        20px 40px,
+
+        100px 180px,
+
+        250px 120px;
+
+    opacity: .55;
+
+    animation: twinkle 8s linear infinite;
 
 }
+
+/* ==========================================================
+   MOON
+========================================================== */
 
 .moon {
 
-    width: 170px;
-
-    height: 170px;
-
-    border-radius: 50%;
-
     position: absolute;
+
+    top: 8%;
 
     right: 8%;
 
-    top: 60px;
+    width: 140px;
 
-    background: #fff;
+    height: 140px;
+
+    border-radius: 50%;
+
+    background: radial-gradient(circle at 35% 35%,
+
+            #ffffff,
+
+            #fff4d4 60%,
+
+            #ffd88f 100%);
 
     box-shadow:
 
-        0 0 80px white;
+        0 0 35px rgba(255, 255, 255, .40),
+
+        0 0 80px rgba(255, 255, 255, .25);
+
+    animation: floatingMoon 7s ease-in-out infinite;
 
 }
+
+/* ==========================================================
+   AURORA
+========================================================== */
 
 .aurora {
 
     position: absolute;
 
+    inset: -20%;
+
+    opacity: .75;
+
+    filter: blur(90px);
+
+    background: linear-gradient(120deg,
+
+            rgba(255, 92, 138, .18),
+
+            rgba(160, 120, 255, .16),
+
+            rgba(120, 210, 255, .12),
+
+            rgba(255, 92, 138, .18));
+
+    animation: auroraMove 18s ease-in-out infinite alternate;
+
+}
+
+/* ==========================================================
+   AMBIENT EFFECTS
+========================================================== */
+
+/* ==========================================================
+   PARTICLES
+========================================================== */
+
+#particles {
+
+    position: absolute;
+
     inset: 0;
 
-    background:
+    overflow: hidden;
 
-        radial-gradient(circle at top, #ff5c8a55, transparent 55%);
+}
+
+#particles::before,
+#particles::after {
+
+    content: "";
+
+    position: absolute;
+
+    top: -60%;
+
+    left: -60%;
+
+    width: 220%;
+
+    height: 220%;
+
+    background-image:
+
+        radial-gradient(circle,
+            rgba(255, 255, 255, .12) 1px,
+            transparent 2px);
+
+    background-size: 80px 80px;
+
+}
+
+#particles::before {
+
+    opacity: .25;
+
+    animation: particlesMove 35s linear infinite;
+
+}
+
+#particles::after {
+
+    opacity: .15;
+
+    animation: particlesMoveReverse 45s linear infinite;
+
+}
+
+/* ==========================================================
+   FIREFLIES
+========================================================== */
+
+#fireflies {
+
+    position: absolute;
+
+    inset: 0;
+
+    overflow: hidden;
+
+}
+
+#fireflies::before,
+#fireflies::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 6px;
+
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: #fff6a8;
+
+    box-shadow:
+
+        0 0 12px rgba(255, 246, 168, .90),
+
+        0 0 30px rgba(255, 246, 168, .45);
+
+}
+
+#fireflies::before {
+
+    top: 18%;
+
+    left: 12%;
+
+    animation:
+
+        fireflyMove1 12s ease-in-out infinite,
+
+        fireflyBlink 2.5s infinite;
+
+}
+
+#fireflies::after {
+
+    right: 18%;
+
+    bottom: 20%;
+
+    animation:
+
+        fireflyMove2 15s ease-in-out infinite,
+
+        fireflyBlink 3s infinite;
+
+}
+
+/* ==========================================================
+   PETALS
+========================================================== */
+
+#petals {
+
+    position: absolute;
+
+    inset: 0;
+
+    overflow: hidden;
+
+}
+
+#petals::before,
+#petals::after {
+
+    content: "🌸";
+
+    position: absolute;
+
+    font-size: 26px;
+
+    opacity: .45;
+
+}
+
+#petals::before {
+
+    top: -10%;
+
+    left: 18%;
+
+    animation: petalFall1 16s linear infinite;
+
+}
+
+#petals::after {
+
+    top: -15%;
+
+    right: 22%;
+
+    animation: petalFall2 20s linear infinite;
+
+}
+
+/* ==========================================================
+   SPARKLES
+========================================================== */
+
+#sparkles {
+
+    position: absolute;
+
+    inset: 0;
+
+    overflow: hidden;
+
+}
+
+#sparkles::before,
+#sparkles::after {
+
+    content: "✦";
+
+    position: absolute;
+
+    color: rgba(255, 255, 255, .85);
+
+    font-size: 18px;
+
+    text-shadow:
+
+        0 0 12px rgba(255, 255, 255, .80);
+
+}
+
+#sparkles::before {
+
+    top: 25%;
+
+    left: 32%;
+
+    animation: sparkle 3s ease-in-out infinite;
+
+}
+
+#sparkles::after {
+
+    right: 28%;
+
+    bottom: 22%;
+
+    animation: sparkle 4.5s ease-in-out infinite;
+
+}
+
+/* ==========================================================
+   DECORATIVE EFFECTS
+========================================================== */
+
+/* ==========================================================
+   SHOOTING STARS
+========================================================== */
+
+#shootingStars {
+
+    position: absolute;
+
+    inset: 0;
+
+    overflow: hidden;
+
+}
+
+#shootingStars::before,
+#shootingStars::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+
+    height: 2px;
+
+    border-radius: var(--radius-round);
+
+    background: linear-gradient(90deg,
+            rgba(255, 255, 255, 0),
+            rgba(255, 255, 255, .95),
+            rgba(255, 255, 255, 0));
+
+    box-shadow:
+        0 0 18px rgba(255, 255, 255, .60);
+
+    transform: rotate(-35deg);
+
+}
+
+#shootingStars::before {
+
+    top: 18%;
+
+    left: -20%;
+
+    animation: shootingStar1 10s linear infinite;
+
+}
+
+#shootingStars::after {
+
+    top: 42%;
+
+    right: -25%;
+
+    animation: shootingStar2 14s linear infinite;
+
+}
+
+/* ==========================================================
+   FLOWERS
+========================================================== */
+
+#flowers {
+
+    position: absolute;
+
+    inset: 0;
+
+    overflow: hidden;
+
+}
+
+#flowers::before,
+#flowers::after {
+
+    content: "🌸";
+
+    position: absolute;
+
+    font-size: 34px;
+
+    opacity: .30;
+
+    filter: drop-shadow(0 0 10px rgba(255, 192, 203, .35));
+
+}
+
+#flowers::before {
+
+    top: 15%;
+
+    left: 8%;
+
+    animation: floatingFlower1 14s ease-in-out infinite;
+
+}
+
+#flowers::after {
+
+    right: 10%;
+
+    bottom: 18%;
+
+    animation: floatingFlower2 18s ease-in-out infinite;
+
+}
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width: 992px) {
+
+    .moon {
+
+        width: 110px;
+
+        height: 110px;
+
+        top: 6%;
+
+        right: 5%;
+
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .moon {
+
+        width: 90px;
+
+        height: 90px;
+
+    }
+
+    .aurora {
+
+        opacity: .55;
+
+    }
+
+    #flowers::before,
+    #flowers::after {
+
+        font-size: 24px;
+
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .moon {
+
+        width: 70px;
+
+        height: 70px;
+
+    }
+
+    .stars {
+
+        opacity: .35;
+
+    }
+
+    .aurora {
+
+        opacity: .40;
+
+        filter: blur(70px);
+
+    }
+
+    #flowers::before,
+    #flowers::after {
+
+        display: none;
+
+    }
 
 }

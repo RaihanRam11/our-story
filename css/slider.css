@@ -1,142 +1,159 @@
-/* ==================================================
-   SLIDER CONTAINER
-================================================== */
+/* ==========================================================
+   MEMORY SLIDER
+========================================================== */
 
-.slider {
+.memory-slider {
+
+    position: relative;
+
+    overflow: hidden;
+
+    width: 100%;
+
+    border-radius: var(--radius-lg);
+
+    background: var(--glass-bg);
+
+    border: 1px solid var(--glass-border);
+
+    backdrop-filter: blur(var(--blur-card));
+
+    -webkit-backdrop-filter: blur(var(--blur-card));
+
+    box-shadow: var(--shadow-lg);
+
+}
+
+/* ==========================================================
+   SLIDER WRAPPER
+========================================================== */
+
+.slider-wrapper {
 
     position: relative;
 
     width: 100%;
 
-    margin-top: 45px;
-
     overflow: hidden;
 
 }
 
-/* ==================================================
-   SLIDES
-================================================== */
+/* ==========================================================
+   SLIDER TRACK
+========================================================== */
 
-.slides {
+.slider-track {
 
-    position: relative;
+    display: flex;
 
     width: 100%;
 
-    border-radius: 24px;
-
-    overflow: hidden;
+    transition: transform var(--transition-normal);
 
 }
 
-/* ==================================================
-   SINGLE SLIDE
-================================================== */
+/*========= Part 2 ========== */
+/* ==========================================================
+   SLIDE
+========================================================== */
 
 .slide {
 
-    display: none;
+    flex: 0 0 100%;
 
-    width: 100%;
+    position: relative;
 
-    animation: fadeSlide .6s ease;
+    user-select: none;
 
 }
 
-.slide.active {
+/* ==========================================================
+   SLIDE IMAGE
+========================================================== */
+
+.slide img {
 
     display: block;
 
-}
-
-/* ==================================================
-   IMAGE
-================================================== */
-
-.slide {
-
     width: 100%;
 
-    height: 520px;
+    aspect-ratio: 4 / 5;
 
     object-fit: cover;
 
-    border-radius: 22px;
-
-    transition: .5s;
-
 }
 
-.slide:hover {
+/* ==========================================================
+   SLIDE OVERLAY
+========================================================== */
 
-    transform: scale(1.02);
-
-}
-
-/* ==================================================
-   PREV NEXT BUTTON
-================================================== */
-
-.prev,
-.next {
+.slide-overlay {
 
     position: absolute;
 
-    top: 50%;
+    inset: 0;
 
-    transform: translateY(-50%);
+    background: linear-gradient(to top,
+            rgba(0, 0, 0, .45),
+            rgba(0, 0, 0, .08),
+            transparent);
 
-    width: 55px;
-
-    height: 55px;
-
-    border: none;
-
-    border-radius: 50%;
-
-    background: rgba(255, 255, 255, .18);
-
-    backdrop-filter: blur(15px);
-
-    color: white;
-
-    font-size: 26px;
-
-    cursor: pointer;
-
-    transition: .35s;
-
-    z-index: 5;
+    pointer-events: none;
 
 }
 
-.prev {
+/* ==========================================================
+   SLIDE CAPTION
+========================================================== */
 
-    left: 18px;
+.slide-caption {
+
+    position: absolute;
+
+    left: 0;
+
+    right: 0;
+
+    bottom: 0;
+
+    padding: 22px;
+
+    color: var(--white);
+
+    background: linear-gradient(to top,
+            rgba(0, 0, 0, .60),
+            transparent);
 
 }
 
-.next {
+/*========= Part 3 ========== */
+/* ==========================================================
+   SLIDER NAVIGATION
+========================================================== */
 
-    right: 18px;
+.slider-navigation {
+
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 0 var(--space-md);
+
+    pointer-events: none;
 
 }
 
-.prev:hover,
-.next:hover {
+/* ==========================================================
+   NAVIGATION BUTTON
+========================================================== */
 
-    background: rgba(255, 255, 255, .30);
-
-    transform: translateY(-50%) scale(1.08);
-
-}
-
-/* ==================================================
-   DOTS
-================================================== */
-
-.dots {
+.slider-btn {
 
     display: flex;
 
@@ -144,75 +161,228 @@
 
     align-items: center;
 
-    gap: 12px;
+    width: 48px;
 
-    margin-top: 25px;
+    height: 48px;
 
-}
-
-.dot {
-
-    width: 12px;
-
-    height: 12px;
+    border: 1px solid var(--glass-border);
 
     border-radius: 50%;
 
-    background: #666;
+    background: var(--glass-bg);
+
+    backdrop-filter: blur(var(--blur-card));
+
+    -webkit-backdrop-filter: blur(var(--blur-card));
+
+    color: var(--white);
 
     cursor: pointer;
 
-    transition: .35s;
+    pointer-events: auto;
+
+    opacity: 0;
+
+    transform: scale(.9);
+
+    transition:
+        opacity var(--transition-normal),
+        transform var(--transition-normal),
+        background var(--transition-normal);
 
 }
 
-.dot.active {
+/* ==========================================================
+   SLIDER DOTS
+========================================================== */
 
-    width: 34px;
+.slider-dots {
 
-    border-radius: 50px;
+    display: flex;
 
-    background: #ff5c8a;
+    justify-content: center;
+
+    align-items: center;
+
+    gap: var(--space-sm);
+
+    margin-top: var(--space-lg);
 
 }
 
-.dot:hover {
+/* ==========================================================
+   DOT
+========================================================== */
 
-    background: #ffffff;
+.slider-dot {
+
+    width: 10px;
+
+    height: 10px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, .28);
+
+    cursor: pointer;
+
+    transition:
+        transform var(--transition-normal),
+        background var(--transition-normal);
 
 }
 
-/* ==================================================
-   PHOTO COUNTER
-================================================== */
+/* ==========================================================
+   ACTIVE DOT
+========================================================== */
 
-.photo-counter {
+.slider-dot.active {
 
-    margin-top: 15px;
+    background: var(--primary);
+
+    transform: scale(1.25);
+
+}
+
+/* ==========================================================
+   SLIDE COUNTER
+========================================================== */
+
+.slider-counter {
+
+    margin-top: var(--space-md);
 
     text-align: center;
 
-    color: #cccccc;
+    color: var(--text-light);
 
-    font-size: 14px;
+    font-size: var(--font-sm);
+
+    letter-spacing: .3px;
 
 }
 
-/* ==================================================
-   FADE
-================================================== */
+/*========= Part 4 ========== */
+/* ==========================================================
+   HOVER STATE
+========================================================== */
 
-@keyframes fadeSlide {
+.memory-slider:hover .slider-btn {
 
-    from {
+    opacity: 1;
 
-        opacity: 0;
+    transform: scale(1);
 
-        transform: scale(.95);
+}
+
+/* ==========================================================
+   NAVIGATION BUTTON HOVER
+========================================================== */
+
+.slider-btn:hover {
+
+    background: rgba(255, 255, 255, .16);
+
+    border-color: rgba(255, 255, 255, .24);
+
+    transform: scale(1.08);
+
+}
+
+.slider-btn:active {
+
+    transform: scale(.95);
+
+}
+
+/* ==========================================================
+   DISABLED BUTTON
+========================================================== */
+
+.slider-btn:disabled {
+
+    opacity: .45;
+
+    cursor: not-allowed;
+
+    pointer-events: none;
+
+}
+
+/* ==========================================================
+   DOT HOVER
+========================================================== */
+
+.slider-dot:hover {
+
+    background: rgba(255, 255, 255, .55);
+
+    transform: scale(1.15);
+
+}
+
+/* ==========================================================
+   ACCESSIBILITY
+========================================================== */
+
+.slider-btn:focus-visible,
+
+.slider-dot:focus-visible {
+
+    outline: 3px solid rgba(255, 255, 255, .35);
+
+    outline-offset: 4px;
+
+}
+
+/* ==========================================================
+   REDUCED MOTION
+========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .slider-track,
+
+    .slider-btn,
+
+    .slider-dot,
+
+    .slide img {
+
+        transition: none !important;
+
+        animation: none !important;
+
+        transform: none !important;
 
     }
 
-    to {
+}
+
+/*========= Part 5 ========== */
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width: 1200px) {
+
+    .memory-slider {
+
+        border-radius: var(--radius-md);
+
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .slider-btn {
+
+        width: 42px;
+
+        height: 42px;
 
         opacity: 1;
 
@@ -220,38 +390,152 @@
 
     }
 
-}
+    .slider-navigation {
 
-/* ==================================================
-   MOBILE
-================================================== */
-
-@media(max-width:768px) {
-
-    .slide {
-
-        height: 340px;
+        padding: 0 var(--space-sm);
 
     }
 
-    .prev,
-    .next {
+    .slide img {
 
-        width: 45px;
+        aspect-ratio: 16 / 10;
 
-        height: 45px;
+    }
 
-        font-size: 20px;
+    .slider-dots {
+
+        gap: var(--space-xs);
+
+    }
+
+    .slider-counter {
+
+        font-size: var(--font-xs);
 
     }
 
 }
 
-@media(max-width:480px) {
+@media (max-width: 480px) {
+
+    .memory-slider {
+
+        border-radius: var(--radius-sm);
+
+    }
+
+    .slider-btn {
+
+        width: 38px;
+
+        height: 38px;
+
+        font-size: .95rem;
+
+    }
+
+    .slider-navigation {
+
+        padding: 0 10px;
+
+    }
+
+    .slide img {
+
+        aspect-ratio: 4 / 3;
+
+    }
+
+    .slide-caption {
+
+        padding: 16px;
+
+    }
+
+    .slider-dot {
+
+        width: 8px;
+
+        height: 8px;
+
+    }
+
+    .slider-counter {
+
+        margin-top: var(--space-sm);
+
+        font-size: .75rem;
+
+    }
+
+}
+
+/*========= Part 6 ========== */
+/* ==========================================================
+   PRINT
+========================================================== */
+
+@media print {
+
+    .memory-slider {
+
+        overflow: visible;
+
+        border: none;
+
+        background: #ffffff;
+
+        box-shadow: none;
+
+        backdrop-filter: none;
+
+        -webkit-backdrop-filter: none;
+
+    }
+
+    .slider-wrapper {
+
+        overflow: visible;
+
+    }
+
+    .slider-track {
+
+        display: block;
+
+        transform: none !important;
+
+    }
 
     .slide {
 
-        height: 240px;
+        display: block;
+
+        width: 100%;
+
+        margin-bottom: 20px;
+
+        break-inside: avoid;
+
+        page-break-inside: avoid;
+
+    }
+
+    .slide img {
+
+        width: 100%;
+
+        height: auto;
+
+    }
+
+    .slider-navigation,
+
+    .slider-dots,
+
+    .slider-counter {
+
+        display: none;
 
     }
 

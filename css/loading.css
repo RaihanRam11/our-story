@@ -1,6 +1,6 @@
-/* ==========================================
-   LOADING
-========================================== */
+/* ==========================================================
+   LOADING SCREEN
+========================================================== */
 
 #loading {
 
@@ -8,7 +8,123 @@
 
     inset: 0;
 
-    background: #090b18;
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: var(--space-xl);
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(circle at top,
+            #2b1a40 0%,
+            #141827 45%,
+            #090b18 100%);
+
+    backdrop-filter: blur(25px);
+
+    -webkit-backdrop-filter: blur(25px);
+
+    opacity: 1;
+
+    visibility: visible;
+
+    z-index: var(--z-loading);
+
+    transition:
+        opacity var(--transition-slow),
+        visibility var(--transition-slow);
+
+}
+
+/* ==========================================================
+   LOADING CONTENT
+========================================================== */
+
+.loading-content {
+
+    position: relative;
+
+    width: min(500px, 100%);
+
+    padding: 55px 45px;
+
+    overflow: hidden;
+
+    text-align: center;
+
+    border: 1px solid var(--glass-border);
+
+    border-radius: var(--radius-xl);
+
+    background: var(--glass-bg);
+
+    backdrop-filter: blur(var(--blur-card));
+
+    -webkit-backdrop-filter: blur(var(--blur-card));
+
+    box-shadow: var(--shadow-lg);
+
+}
+
+/* ==========================================================
+   DECORATION GLOW
+========================================================== */
+
+.loading-content::before,
+
+.loading-content::after {
+
+    content: "";
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    filter: blur(100px);
+
+    pointer-events: none;
+
+    z-index: var(--z-background);
+
+}
+
+.loading-content::before {
+
+    top: -80px;
+
+    left: -80px;
+
+    width: 250px;
+
+    height: 250px;
+
+    background: rgba(255, 92, 138, .25);
+
+}
+
+.loading-content::after {
+
+    right: -80px;
+
+    bottom: -80px;
+
+    width: 220px;
+
+    height: 220px;
+
+    background: rgba(143, 125, 255, .20);
+
+}
+
+/* ==========================================================
+   LOADER
+========================================================== */
+
+.loader-wrapper {
 
     display: flex;
 
@@ -16,78 +132,236 @@
 
     align-items: center;
 
-    z-index: 9999;
-
-}
-
-.loading-content {
-
-    text-align: center;
-
-    width: min(420px, 90%);
+    margin-bottom: var(--space-xl);
 
 }
 
 .loader-heart {
 
-    font-size: 70px;
+    font-size: 4.375rem;
 
-    animation: heartbeat 1.2s infinite;
+    line-height: 1;
+
+    color: var(--primary);
+
+    filter:
+        drop-shadow(0 0 12px rgba(255, 92, 138, .70)) drop-shadow(0 0 30px rgba(255, 92, 138, .45));
+
+    animation: heartbeat 1.5s infinite;
+
+    will-change: transform;
 
 }
+
+/* ==========================================================
+   TITLE
+========================================================== */
 
 .loading-title {
 
-    margin-top: 20px;
+    margin-bottom: var(--space-md);
 
-    font-size: 30px;
+    font-size: var(--font-2xl);
 
     font-weight: 700;
 
+    line-height: 1.4;
+
+    color: var(--white);
+
 }
+
+/* ==========================================================
+   SUBTITLE
+========================================================== */
 
 .loading-subtitle {
 
-    margin-top: 15px;
+    margin-bottom: var(--space-xl);
 
-    color: #ddd;
+    font-size: var(--font-md);
+
+    line-height: 1.8;
+
+    color: var(--text-light);
 
 }
+
+/* ==========================================================
+   PROGRESS BAR
+========================================================== */
 
 .loading-progress {
 
     width: 100%;
 
-    height: 8px;
-
-    background: rgba(255, 255, 255, .15);
-
-    border-radius: 50px;
-
-    overflow: hidden;
-
-    margin-top: 35px;
-
 }
 
 .loading-bar {
 
-    width: 0%;
+    position: relative;
+
+    width: 100%;
+
+    height: 14px;
+
+    overflow: hidden;
+
+    border-radius: var(--radius-round);
+
+    background: rgba(255, 255, 255, .08);
+
+    border: 1px solid rgba(255, 255, 255, .08);
+
+}
+
+.loading-fill {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 0;
 
     height: 100%;
 
-    background: linear-gradient(90deg, #ff5c8a, #ff9fba);
+    border-radius: inherit;
 
-    border-radius: 50px;
+    background: linear-gradient(90deg,
+            var(--primary),
+            var(--primary-light),
+            var(--primary-soft));
+
+    box-shadow: 0 0 20px rgba(255, 92, 138, .45);
+
+    transition: width .25s linear;
 
 }
+
+.loading-fill::after {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    right: -20px;
+
+    width: 50px;
+
+    height: 100%;
+
+    background: rgba(255, 255, 255, .45);
+
+    filter: blur(8px);
+
+}
+
+/* ==========================================================
+   INFORMATION
+========================================================== */
 
 .loading-percent {
 
     display: block;
 
-    margin-top: 18px;
+    margin-top: var(--space-lg);
 
-    font-weight: 600;
+    font-size: var(--font-lg);
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: var(--primary);
+
+}
+
+.loading-message {
+
+    margin-top: var(--space-lg);
+
+    font-size: var(--font-sm);
+
+    line-height: 1.7;
+
+    color: var(--text-light);
+
+}
+
+/* ==========================================================
+   LOADING HIDDEN STATE
+========================================================== */
+
+#loading.hide {
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+}
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width: 768px) {
+
+    .loading-content {
+
+        padding: 40px 30px;
+
+    }
+
+    .loader-heart {
+
+        font-size: 3.5rem;
+
+    }
+
+    .loading-title {
+
+        font-size: var(--font-xl);
+
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .loading-content {
+
+        padding: 30px 20px;
+
+    }
+
+    .loader-heart {
+
+        font-size: 3rem;
+
+    }
+
+    .loading-title {
+
+        font-size: var(--font-lg);
+
+    }
+
+    .loading-subtitle {
+
+        font-size: var(--font-sm);
+
+    }
+
+    .loading-bar {
+
+        height: 12px;
+
+    }
 
 }

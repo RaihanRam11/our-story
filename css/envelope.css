@@ -1,0 +1,806 @@
+/* ==========================================================
+   ENVELOPE SECTION
+========================================================== */
+
+.envelope-section {
+
+    position: fixed;
+
+    inset: 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: var(--space-xl);
+
+    background: rgba(8, 10, 20, .45);
+
+    backdrop-filter: blur(12px);
+
+    -webkit-backdrop-filter: blur(12px);
+
+    z-index: var(--z-envelope);
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transition:
+        opacity var(--transition-slow),
+        visibility var(--transition-slow);
+
+}
+
+/* ==========================================================
+   HIDDEN STATE
+========================================================== */
+
+.envelope-section.hidden {
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+}
+
+/* ==========================================================
+   ENVELOPE CONTAINER
+========================================================== */
+
+.envelope-container {
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    width: min(700px, 92%);
+
+    text-align: center;
+
+}
+
+/* ==========================================================
+   ENVELOPE HEADER
+========================================================== */
+
+.envelope-header {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: var(--space-lg);
+
+    margin-bottom: 48px;
+
+}
+
+/* ==========================================================
+   ENVELOPE ICON
+========================================================== */
+
+.envelope-icon {
+
+    font-size: 3rem;
+
+    line-height: 1;
+
+    user-select: none;
+
+    animation: heartbeat 2.5s ease-in-out infinite;
+
+}
+
+/* ==========================================================
+   ENVELOPE TITLE
+========================================================== */
+
+.envelope-title {
+
+    font-size: clamp(2rem, 5vw, 3.1rem);
+
+    font-weight: 700;
+
+    line-height: 1.2;
+
+    letter-spacing: -.5px;
+
+    background: var(--gradient-title);
+
+    background-size: 300%;
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    animation: gradientFlow 8s linear infinite;
+
+}
+
+/* ==========================================================
+   ENVELOPE SUBTITLE
+========================================================== */
+
+.envelope-subtitle {
+
+    max-width: 540px;
+
+    color: var(--text-light);
+
+    font-size: var(--font-lg);
+
+    line-height: 1.9;
+
+}
+
+/* ==========================================================
+   ENVELOPE
+========================================================== */
+
+.envelope {
+
+    position: relative;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    width: 320px;
+
+    height: 220px;
+
+    margin-top: 10px;
+
+    margin-bottom: 36px;
+
+    overflow: visible;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    perspective: 1200px;
+
+    transform-style: preserve-3d;
+
+    transition:
+        transform var(--transition-normal),
+        filter var(--transition-normal);
+
+}
+
+.envelope:active {
+
+    transform: scale(.97);
+
+}
+
+/* ==========================================================
+   ENVELOPE GLOW
+========================================================== */
+
+.envelope-glow {
+
+    position: absolute;
+
+    inset: -24px;
+
+    border-radius: 30px;
+
+    background: radial-gradient(circle,
+
+            rgba(255, 92, 138, .30) 0%,
+
+            rgba(255, 92, 138, .16) 45%,
+
+            transparent 78%);
+
+    filter: blur(30px);
+
+    opacity: .85;
+
+    pointer-events: none;
+
+    transform: scale(1);
+
+    transition:
+        transform .45s ease,
+        opacity .45s ease;
+
+    z-index: -2;
+
+}
+
+/* ==========================================================
+   ENVELOPE BACK
+========================================================== */
+
+.envelope-back {
+
+    position: absolute;
+
+    inset: 0;
+
+    border-radius: 18px;
+
+    background: linear-gradient(145deg,
+
+            #ffdce8,
+
+            #ffc5da);
+
+    box-shadow:
+        0 18px 45px rgba(255, 92, 138, .20);
+
+    z-index: 1;
+
+}
+
+/* ==========================================================
+   LETTER PAPER
+========================================================== */
+
+.letter-paper {
+
+    position: absolute;
+
+    left: 50%;
+
+    bottom: 28px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    overflow: hidden;
+
+    width: 185px;
+
+    height: 145px;
+
+    border-radius: 14px;
+
+    background: linear-gradient(180deg,
+
+            #ffffff,
+
+            #fff8fb);
+
+    box-shadow:
+        0 10px 24px rgba(0, 0, 0, .15);
+
+    transform: translateX(-50%);
+
+    transition:
+        transform .6s ease,
+        box-shadow var(--transition-normal);
+
+    z-index: 2;
+
+}
+
+/* ==========================================================
+   LETTER ICON
+========================================================== */
+
+.letter-icon {
+
+    font-size: 42px;
+
+    line-height: 1;
+
+    user-select: none;
+
+    transition:
+        transform .45s ease,
+        opacity .35s ease;
+
+}
+
+/* ==========================================================
+   ENVELOPE FLAP
+========================================================== */
+
+.envelope-flap {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 112px;
+
+    background: linear-gradient(145deg,
+
+            #ff7aa6,
+
+            #ff9fc1);
+
+    clip-path: polygon(0 0,
+
+            100% 0,
+
+            50% 100%);
+
+    transform: rotateX(0deg);
+
+    transform-origin: top;
+
+    backface-visibility: hidden;
+
+    -webkit-backface-visibility: hidden;
+
+    transition:
+        transform .6s ease;
+
+    z-index: 5;
+
+}
+
+/* ==========================================================
+   ENVELOPE FRONT
+========================================================== */
+
+.envelope-front {
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: 0;
+
+    width: 100%;
+
+    height: 118px;
+
+    border-radius: 0 0 18px 18px;
+
+    background: linear-gradient(145deg,
+
+            #ff5c8a,
+
+            #ff84ae);
+
+    clip-path: polygon(0 100%,
+
+            50% 34%,
+
+            100% 100%);
+
+    z-index: 4;
+
+}
+
+/* ==========================================================
+   ENVELOPE SEAL
+========================================================== */
+
+.envelope-seal {
+
+    position: absolute;
+
+    top: 82px;
+
+    left: 50%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    width: 44px;
+
+    height: 44px;
+
+    border-radius: 50%;
+
+    background: linear-gradient(145deg,
+
+            #ff5c8a,
+
+            #ff7da7);
+
+    color: var(--white);
+
+    font-size: 18px;
+
+    box-shadow:
+        0 6px 16px rgba(0, 0, 0, .18);
+
+    transform: translateX(-50%);
+
+    transition:
+        transform .45s ease,
+        opacity .35s ease;
+
+    z-index: 6;
+
+}
+
+/* ==========================================================
+   ENVELOPE HOVER
+========================================================== */
+
+.envelope:hover {
+
+    transform:
+        translateY(-10px) scale(1.03);
+
+    filter:
+        brightness(1.05) drop-shadow(0 22px 40px rgba(255, 92, 138, .25));
+
+}
+
+.envelope:hover .envelope-glow {
+
+    transform: scale(1.12);
+
+    opacity: 1;
+
+}
+
+.envelope:hover .letter-icon {
+
+    transform: scale(1.08);
+
+}
+
+/* ==========================================================
+   ENVELOPE OPEN STATE
+========================================================== */
+
+.envelope.open {
+
+    pointer-events: none;
+
+}
+
+.envelope.open .envelope-flap {
+
+    transform: rotateX(180deg);
+
+}
+
+.envelope.open .letter-paper {
+
+    transform:
+        translateX(-50%) translateY(-95px);
+
+}
+
+.envelope.open .envelope-seal {
+
+    transform:
+        translateX(-50%) scale(.8);
+
+    opacity: 0;
+
+}
+
+.envelope.open .envelope-glow {
+
+    transform: scale(1.25);
+
+    opacity: 1;
+
+}
+
+.envelope.open .letter-icon {
+
+    transform: scale(1.15);
+
+    opacity: 0;
+
+}
+
+/* ==========================================================
+   ENVELOPE NOTE
+========================================================== */
+
+.envelope-note {
+
+    margin-top: 34px;
+
+    color: rgba(255, 255, 255, .75);
+
+    font-size: .95rem;
+
+    line-height: 1.8;
+
+    letter-spacing: .3px;
+
+    text-align: center;
+
+    user-select: none;
+
+    transition:
+        color var(--transition-normal),
+        opacity var(--transition-normal);
+
+}
+
+.envelope:hover+.envelope-note {
+
+    color: var(--white);
+
+}
+
+/* ==========================================================
+   ACCESSIBILITY
+========================================================== */
+
+.envelope:focus-visible {
+
+    outline: 3px solid rgba(255, 255, 255, .45);
+
+    outline-offset: 8px;
+
+    border-radius: var(--radius-xl);
+
+}
+
+/* ==========================================================
+   REDUCED MOTION
+========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .envelope,
+    .envelope-glow,
+    .envelope-flap,
+    .letter-paper,
+    .letter-icon,
+    .envelope-seal {
+
+        animation: none !important;
+
+        transition: none !important;
+
+    }
+
+}
+
+/* ==========================================================
+   PRINT
+========================================================== */
+
+@media print {
+
+    .envelope-section {
+
+        display: none;
+
+    }
+
+}
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width: 1200px) {
+
+    .envelope-container {
+
+        width: min(620px, 94%);
+
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .envelope-container {
+
+        width: min(560px, 94%);
+
+    }
+
+    .envelope-header {
+
+        gap: 16px;
+
+        margin-bottom: 40px;
+
+    }
+
+    .envelope-icon {
+
+        font-size: 2.6rem;
+
+    }
+
+    .envelope-title {
+
+        font-size: clamp(1.8rem, 5vw, 2.6rem);
+
+    }
+
+    .envelope-subtitle {
+
+        max-width: 420px;
+
+        font-size: var(--font-md);
+
+        line-height: 1.8;
+
+    }
+
+    .envelope {
+
+        width: 280px;
+
+        height: 195px;
+
+    }
+
+    .letter-paper {
+
+        width: 165px;
+
+        height: 130px;
+
+    }
+
+    .letter-icon {
+
+        font-size: 38px;
+
+    }
+
+    .envelope-flap {
+
+        height: 100px;
+
+    }
+
+    .envelope-front {
+
+        height: 105px;
+
+    }
+
+    .envelope-seal {
+
+        top: 74px;
+
+        width: 40px;
+
+        height: 40px;
+
+        font-size: 17px;
+
+    }
+
+    .envelope-note {
+
+        font-size: .9rem;
+
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .envelope-section {
+
+        padding: 24px;
+
+    }
+
+    .envelope-container {
+
+        width: 100%;
+
+    }
+
+    .envelope-header {
+
+        gap: 14px;
+
+        margin-bottom: 32px;
+
+    }
+
+    .envelope-icon {
+
+        font-size: 2.2rem;
+
+    }
+
+    .envelope-title {
+
+        font-size: 1.6rem;
+
+    }
+
+    .envelope-subtitle {
+
+        max-width: 100%;
+
+        font-size: .95rem;
+
+        line-height: 1.7;
+
+    }
+
+    .envelope {
+
+        width: 230px;
+
+        height: 160px;
+
+    }
+
+    .letter-paper {
+
+        bottom: 22px;
+
+        width: 140px;
+
+        height: 105px;
+
+    }
+
+    .letter-icon {
+
+        font-size: 34px;
+
+    }
+
+    .envelope-flap {
+
+        height: 82px;
+
+    }
+
+    .envelope-front {
+
+        height: 88px;
+
+    }
+
+    .envelope-seal {
+
+        top: 60px;
+
+        width: 34px;
+
+        height: 34px;
+
+        font-size: 14px;
+
+    }
+
+    .envelope-note {
+
+        margin-top: 28px;
+
+        font-size: .82rem;
+
+    }
+
+}

@@ -3,52 +3,23 @@
 
 <head>
 
-    <!-- ==========================================
+    <!-- ==========================================================
          META
-    =========================================== -->
+    =========================================================== -->
 
     <meta charset="UTF-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description"
-        content="Website spesial yang dibuat dengan penuh cinta untuk seseorang yang paling berarti ❤️">
-
-    <meta name="author" content="Raihan Ramdhani">
-
-    <meta name="keywords" content="Love, Romantic Website, Our Story, Anniversary, Love Letter">
+    <meta name="description" content="Website spesial untuk seseorang yang paling berarti dalam hidupku ❤️">
 
     <meta name="theme-color" content="#ff5c8a">
 
-    <meta name="color-scheme" content="dark">
+    <title>❤️ Our Journey ❤️</title>
 
-    <!-- ==========================================
-         OPEN GRAPH (WhatsApp & Facebook)
-    =========================================== -->
-
-    <meta property="og:title" content="❤️ Our Story ❤️">
-
-    <meta property="og:description" content="Website spesial yang kubuat hanya untukmu ❤️">
-
-    <meta property="og:type" content="website">
-
-    <meta property="og:image" content="images/photo1.jpeg">
-
-    <!-- ==========================================
-         TITLE
-    =========================================== -->
-
-    <title>❤️ Our Story ❤️</title>
-
-    <!-- ==========================================
-         FAVICON
-    =========================================== -->
-
-    <link rel="icon" href="images/favicon.png" type="image/png">
-
-    <!-- ==========================================
+    <!-- ==========================================================
          GOOGLE FONT
-    =========================================== -->
+    =========================================================== -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
@@ -57,27 +28,53 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
 
-    <!-- ==========================================
+    <!-- ==========================================================
          CSS
-    =========================================== -->
+    =========================================================== -->
 
     <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="css/animation.css">
+
+    <link rel="stylesheet" href="css/loading.css">
+
+    <link rel="stylesheet" href="css/opening.css">
+
+    <link rel="stylesheet" href="css/background.css">
+
+    <link rel="stylesheet" href="css/hero.css">
+
+    <link rel="stylesheet" href="css/gift.css">
+
+    <link rel="stylesheet" href="css/envelope.css">
+
+    <link rel="stylesheet" href="css/letter.css">
+
+    <link rel="stylesheet" href="css/journey.css">
+
+    <link rel="stylesheet" href="css/timeline.css">
+
+    <link rel="stylesheet" href="css/video.css">
+
+    <link rel="stylesheet" href="css/footer.css">
+
+    <link rel="stylesheet" href="css/music.css">
+
+    <link rel="stylesheet" href="css/lightbox.css">
 
 </head>
 
 <body>
 
-    <!-- ==========================================
-     LOADING SCREEN
-========================================== -->
+    <!-- ==========================================================
+         LOADING
+    =========================================================== -->
 
-    <div id="loading" class="loading-screen" role="status" aria-live="polite">
+    <section id="loading" aria-label="Loading Website">
 
         <div class="loading-content">
 
-            <!-- Heart Animation -->
-
-            <div class="loader-wrapper" aria-hidden="true">
+            <div class="loader-wrapper">
 
                 <div class="loader-heart">
                     ❤️
@@ -85,79 +82,42 @@
 
             </div>
 
-            <!-- Title -->
-
-            <h2 class="loading-title">
-
-                Menyiapkan Kejutan Untuk Sayang...
-
-            </h2>
-
-            <!-- Dynamic Text -->
+            <h1 class="loading-title">
+                Menyiapkan Kejutan...
+            </h1>
 
             <p class="loading-subtitle">
-
-                Mohon tunggu sebentar ya sayang 💖
-
+                Sebentar ya Sayang,
+                semuanya sedang dipersiapkan khusus untukmu ❤️
             </p>
 
-            <!-- Progress -->
-
             <div class="loading-progress">
+
                 <div class="loading-bar">
-                    <span class="loading-fill"></span>
+
+                    <div class="loading-fill"></div>
+
                 </div>
+
+                <span class="loading-percent">
+                    0%
+                </span>
+
+                <p class="loading-message">
+                    Memuat kenangan terindah...
+                </p>
+
             </div>
 
-            <!-- Percentage -->
-            <span class="loading-percent">
-
-                0%
-
-            </span>
-
         </div>
 
-    </div>
+    </section>
 
-    <!-- ================ BACKGROUND ============== -->
+    <!-- ==========================================================
+         OPENING
+    =========================================================== -->
 
-    <!-- ==========================================
-     BACKGROUND
-========================================== -->
-
-    <div id="background" aria-hidden="true">
-
-        <div class="background-layer">
-
-            <!-- Stars -->
-            <div id="stars"></div>
-            <!-- Moon -->
-            <div id="moon"></div>
-            <!-- Aurora -->
-            <div id="aurora"></div>
-            <!-- Particles -->
-            <div id="particles"></div>
-            <!-- Fireflies -->
-            <div id="fireflies"></div>
-            <!-- Petals -->
-            <div id="petals"></div>
-            <!-- Sparkles -->
-            <div id="sparkles"></div>
-            <!-- Shooting Stars -->
-            <div id="shootingStars"></div>
-            <!-- Flowers -->
-            <div id="flowers"></div>
-
-        </div>
-
-    </div>
-
-    <!-- ==========================================
-         OPENING SCREEN
-    =========================================== -->
-
-    <section id="opening">
+    <section id="opening" aria-labelledby="opening-title">
 
         <div class="opening-overlay"></div>
 
@@ -166,40 +126,39 @@
             <div class="opening-content">
 
                 <span class="welcome">
-
                     ❤️ Selamat Datang ❤️
-
                 </span>
 
-                <h1 class="opening-title">
+                <h1 id="opening-title" class="opening-title">
 
-                    Sebuah Hadiah Kecil
-                    Untuk Sayangku 💖
+                    Hai Sayang...
+
+                    <br>
+
+                    Ada sesuatu yang ingin
+                    aku tunjukkan untukmu ❤️
 
                 </h1>
 
                 <p class="opening-subtitle">
 
-                    Website ini kubuat khusus untukmu.
-                    Semoga setiap halaman yang kamu buka
-                    bisa membuatmu tersenyum,
-                    karena semua ini dibuat
-                    dengan penuh cinta.
+                    Website ini dibuat khusus
+                    sebagai hadiah kecil,
+                    berisi semua cerita,
+                    kenangan,
+                    dan perjalanan kita bersama.
 
                 </p>
 
-                <button id="startBtn" type="button" class="primary-btn">
+                <button id="startBtn" class="primary-btn" type="button">
 
-                    <span>🎁</span>
-
-                    <span>Buka Hadiah</span>
+                    Buka Cerita Kita ❤️
 
                 </button>
 
                 <small class="opening-note">
 
-                    Klik tombol di atas
-                    untuk memulai perjalanan kita ❤️
+                    Gunakan headset untuk pengalaman terbaik 🎧
 
                 </small>
 
@@ -209,70 +168,159 @@
 
     </section>
 
-    <!-- ==========================================
+    <!--Part 2-->
+
+    <!-- ==========================================================
          MAIN CONTENT
-    =========================================== -->
+    =========================================================== -->
 
-    <main id="mainContent">
+    <main id="app">
 
-        <!-- ==========================================
+        <!-- ======================================================
+             BACKGROUND
+        ======================================================= -->
+
+        <div class="background" aria-hidden="true">
+
+            <!-- Aurora -->
+
+            <div class="aurora"></div>
+
+            <!-- Moon -->
+
+            <div class="moon"></div>
+
+            <!-- Stars -->
+
+            <div class="stars"></div>
+
+            <!-- Floating Particles -->
+
+            <div class="particles"></div>
+
+            <!-- Floating Petals -->
+
+            <div class="petals"></div>
+
+            <!-- Flowers -->
+
+            <div class="flowers"></div>
+
+            <!-- Fireflies -->
+
+            <div class="fireflies"></div>
+
+            <!-- Gradient Overlay -->
+
+            <div class="background-overlay"></div>
+
+        </div>
+
+        <!-- ======================================================
              HERO SECTION
-        =========================================== -->
+        ======================================================= -->
 
-        <section id="home">
+        <section id="hero" class="hero-section" aria-labelledby="hero-title">
 
             <div class="hero-container">
 
-                <div class="hero">
+                <span class="hero-badge">
 
-                    <span class="tag">
+                    ❤️ Website Spesial Untukmu ❤️
 
-                        ❤️ Website Spesial Untukmu ❤️
+                </span>
+
+                <h1 id="hero-title" class="hero-title">
+
+                    Hai Sayang ❤️
+
+                </h1>
+
+                <p class="hero-subtitle">
+
+                    Terima kasih sudah hadir
+                    dalam hidupku.
+
+                    Website kecil ini dibuat
+                    khusus untuk menyimpan
+                    setiap kenangan indah
+                    yang kita lalui bersama.
+
+                </p>
+
+                <button id="openGiftBtn" class="hero-button" type="button">
+
+                    Mulai Perjalanan Kita ❤️
+
+                </button>
+
+                <span class="scroll-indicator">
+
+                    Scroll ke bawah ↓
+
+                </span>
+
+            </div>
+
+        </section>
+
+        <!-- Part 3 -->
+        <!-- ======================================================
+             GIFT SECTION
+        ======================================================= -->
+
+        <section id="gift" class="gift-section" aria-labelledby="gift-title">
+
+            <div class="gift-container">
+
+                <div class="gift-content">
+
+                    <span class="gift-badge">
+
+                        🎁 Hadiah Kecil Untukmu 🎁
 
                     </span>
 
-                    <h1 class="hero-title">
+                    <h2 id="gift-title" class="gift-title">
 
-                        Hai Sayangg 🌹
+                        Sebelum Kita Melanjutkan...
 
-                    </h1>
+                    </h2>
 
-                    <p class="hero-subtitle">
+                    <p class="gift-description">
 
-                        Terima kasih sudah hadir
-                        dan menjadi bagian
-                        terindah dalam hidupku.
+                        Aku mempunyai sebuah hadiah kecil.
 
-                        Website kecil ini
-                        kubuat khusus untukmu.
+                        Mungkin hadiah ini tidak sempurna,
+                        tetapi setiap bagian di dalamnya dibuat
+                        dengan penuh cinta, waktu,
+                        dan kenangan yang kita lalui bersama.
 
                     </p>
 
-                    <div class="hero-buttons">
+                    <div class="gift-box-wrapper">
 
-                        <button id="openBtn" type="button" class="primary-btn">
+                        <button id="openGiftBtn" class="gift-box" type="button" aria-label="Buka hadiah">
 
-                            💌 Buka Surat
+                            <span class="gift-lid"></span>
+
+                            <span class="gift-body"></span>
+
+                            <span class="gift-ribbon ribbon-x"></span>
+
+                            <span class="gift-ribbon ribbon-y"></span>
+
+                            <span class="gift-bow"></span>
 
                         </button>
 
                     </div>
 
-                    <div class="scroll-indicator">
+                    <p class="gift-note">
 
-                        <span>
+                        Klik kotak hadiah untuk melanjutkan ❤️
 
-                            Scroll untuk melihat lebih banyak
-
-                        </span>
-
-                        <div class="mouse">
-
-                            <div class="wheel"></div>
-
-                        </div>
-
-                    </div>
+                    </p>
 
                 </div>
 
@@ -280,748 +328,618 @@
 
         </section>
 
-        <!-- ==========================================
-             GIFT BOX
-        =========================================== -->
+        <!-- Part 4 -->
+        <!-- ======================================================
+             ENVELOPE SECTION
+        ======================================================= -->
 
-        <div id="giftBox" class="hidden">
+        <section id="envelope" class="envelope-section" aria-labelledby="envelope-title">
 
-            <div class="gift">
+            <div class="envelope-container">
 
-                🎁
+                <!-- Header -->
 
-            </div>
+                <header class="envelope-header">
 
-        </div>
-
-        <!-- ==========================================
-             ENVELOPE
-        =========================================== -->
-
-        <div id="envelope" class="hidden">
-
-            <div class="envelope">
-
-                <div class="cover"></div>
-
-                <div class="paper">
-
-                    💌
-
-                </div>
-
-            </div>
-
-        </div>
-
-        <!-- ==========================================
-             LETTER SECTION
-        =========================================== -->
-
-        <section id="letter" class="letter hidden">
-
-            <div class="letter-container">
-
-                <!-- ================= HEADER ================= -->
-
-                <div class="letter-header">
-
-                    <span class="letter-icon">
-
+                    <span class="envelope-icon">
                         💌
-
                     </span>
 
-                    <h2 class="letter-title">
+                    <h2 id="envelope-title" class="envelope-title">
 
-                        Untukmu ❤️
+                        Sebuah Surat Untukmu
 
                     </h2>
 
-                    <p class="letter-date">
+                    <p class="envelope-subtitle">
 
-                        Dibuat dengan penuh cinta ❤️
+                        Ada sesuatu yang ingin aku sampaikan.
 
-                    </p>
-
-                </div>
-
-                <!-- ================= BODY ================= -->
-
-                <div class="letter-body">
-
-                    <p id="letterText" class="typing">
-
-                        Terima kasih karena telah hadir
-                        dan membuat hari-hariku menjadi
-                        lebih indah.
-
-                        Mungkin aku belum sempurna,
-                        tetapi aku akan selalu berusaha
-                        menjadi seseorang yang bisa
-                        membuatmu bahagia.
-
-                        Semoga kita selalu bersama,
-                        saling mendukung,
-                        saling menguatkan,
-                        dan semoga semua doa kita
-                        dapat menjadi kenyataan.
-
-                        ❤️
+                        Mungkin tidak bisa aku ucapkan secara langsung,
+                        jadi aku menuliskannya di sini.
 
                     </p>
 
-                </div>
+                </header>
 
-                <!-- ==========================================
-                     MEMORY GALLERY
-                =========================================== -->
+                <!-- Envelope -->
 
-                <div class="gallery">
+                <button id="openEnvelopeBtn" class="envelope" type="button" aria-label="Buka surat">
 
-                    <div class="gallery-header">
+                    <span class="envelope-glow"></span>
 
-                        <span class="gallery-icon">
+                    <span class="envelope-back"></span>
 
-                            📸
+                    <span class="letter-paper">
+
+                        <span class="letter-icon">
+
+                            ❤️
 
                         </span>
 
-                        <h3 class="gallery-title">
+                    </span>
 
-                            Kenangan Kita
+                    <span class="envelope-flap"></span>
 
-                        </h3>
+                    <span class="envelope-front"></span>
 
-                        <p class="gallery-subtitle">
+                    <span class="envelope-seal">
 
-                            Setiap foto memiliki cerita,
-                            dan setiap cerita adalah bagian
-                            dari perjalanan kita.
+                        ❤
+
+                    </span>
+
+                </button>
+
+                <!-- Note -->
+
+                <p class="envelope-note">
+
+                    Klik amplop untuk membaca surat ❤️
+
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- Part 5 -->
+        <!-- ======================================================
+             LETTER SECTION
+        ======================================================= -->
+
+        <section id="letter" class="letter-section" aria-labelledby="letter-title">
+
+            <div class="letter-container">
+
+                <article class="letter-paper">
+
+                    <!-- Header -->
+
+                    <header class="letter-header">
+
+                        <span class="letter-icon">
+                            ❤️
+                        </span>
+
+                        <h2 id="letter-title" class="letter-title">
+
+                            Untuk Sayangku...
+
+                        </h2>
+
+                        <p class="letter-date">
+
+                            Dibuat dengan penuh cinta ❤️
+
+                        </p>
+
+                    </header>
+
+                    <!-- Letter Body -->
+
+                    <div class="letter-body">
+
+                        <p id="typingText" class="typing">
 
                         </p>
 
                     </div>
 
-                    <!-- ================= SLIDER ================= -->
+                    <!-- Footer -->
 
-                    <div class="slider">
+                    <footer class="letter-footer">
 
-                        <div class="slides">
+                        <span class="signature-label">
 
-                            <div class="slide active">
-
-                                <img src="./images/photo1.jpeg" alt="Kenangan 1">
-
-                                <div class="slide-caption">
-
-                                    ❤️ Kenangan Pertama
-
-                                </div>
-
-                            </div>
-
-                            <div class="slide">
-
-                                <img src="./images/photo2.jpeg" alt="Kenangan 2">
-
-                                <div class="slide-caption">
-
-                                    🌹 Momen Terindah
-
-                                </div>
-
-                            </div>
-
-                            <div class="slide">
-
-                                <img src="./images/photo3.jpeg" alt="Kenangan 3">
-
-                                <div class="slide-caption">
-
-                                    💖 Selalu Bersama
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <!-- Navigation -->
-
-                        <button class="prev" type="button" aria-label="Foto Sebelumnya">
-
-                            &#10094;
-
-                        </button>
-
-                        <button class="next" type="button" aria-label="Foto Berikutnya">
-
-                            &#10095;
-
-                        </button>
-
-                        <!-- Indicator -->
-
-                        <div class="dots">
-
-                            <span class="dot active"></span>
-
-                            <span class="dot"></span>
-
-                            <span class="dot"></span>
-
-                        </div>
-
-                        <!-- Counter -->
-
-                        <div class="slide-counter">
-
-                            <span id="currentSlide">
-
-                                1
-
-                            </span>
-
-                            /
-
-                            <span id="totalSlide">
-
-                                3
-
-                            </span>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <!-- ==========================================
-                     TIMELINE
-                =========================================== -->
-
-                <div class="timeline">
-
-                    <div class="timeline-header">
-
-                        <h3 class="timeline-title">
-
-                            ❤️ Perjalanan Kita
-
-                        </h3>
-
-                    </div>
-
-                    <div class="timeline-body">
-
-                        <div class="timeline-item">
-
-                            🌸 Pertama Bertemu
-
-                        </div>
-
-                        <div class="timeline-item">
-
-                            🌹 Pertama Jalan Bersama
-
-                        </div>
-
-                        <div class="timeline-item">
-
-                            💕 Menjadi Kita
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <!-- ==========================================
-                     LOVE COUNTER
-                =========================================== -->
-
-                <div class="love-counter">
-                    <h3 class="counter-title">
-                        ❤️ Bersama Selama
-                    </h3>
-                    <div id="daysTogether">
-                        000 Hari
-                    </div>
-                </div>
-
-                <!-- ==========================================
-                     LOVE QUOTE
-                =========================================== -->
-
-                <div class="quote-box">
-                    <blockquote id="loveQuote">
-                        "Terima kasih telah menjadi bagian
-                        terindah dalam hidupku."
-                    </blockquote>
-                </div>
-
-                <!-- ==========================================
-                     SIGNATURE
-                =========================================== -->
-
-                <div class="letter-footer">
-                    <span>
-                        Dengan Cinta,
-                    </span>
-
-                    <h3>
-                        Raihan ❤️
-                    </h3>
-                </div>
-            </div>
-        </section>
-        <!-- ==========================================
-             LETTER SECTION
-        =========================================== -->
-
-        <section id="letter" class="letter hidden">
-
-            <div class="letter-container">
-
-                <!-- ================= HEADER ================= -->
-
-                <div class="letter-header">
-
-                    <span class="letter-icon">
-
-                        💌
-
-                    </span>
-
-                    <h2 class="letter-title">
-
-                        Untukmu ❤️
-
-                    </h2>
-
-                    <p class="letter-date">
-
-                        Dibuat dengan penuh cinta ❤️
-
-                    </p>
-
-                </div>
-
-                <!-- ================= BODY ================= -->
-
-                <div class="letter-body">
-
-                    <p id="letterText" class="typing">
-
-                        Terima kasih karena telah hadir
-                        dan membuat hari-hariku menjadi
-                        lebih indah.
-
-                        Mungkin aku belum sempurna,
-                        tetapi aku akan selalu berusaha
-                        menjadi seseorang yang bisa
-                        membuatmu bahagia.
-
-                        Semoga kita selalu bersama,
-                        saling mendukung,
-                        saling menguatkan,
-                        dan semoga semua doa kita
-                        dapat menjadi kenyataan.
-
-                        ❤️
-
-                    </p>
-
-                </div>
-
-                <!-- ==========================================
-                     MEMORY GALLERY
-                =========================================== -->
-
-                <div class="gallery">
-
-                    <div class="gallery-header">
-
-                        <span class="gallery-icon">
-
-                            📸
+                            Dengan cinta,
 
                         </span>
 
-                        <h3 class="gallery-title">
+                        <span class="signature-name">
 
-                            Kenangan Kita
+                            Raihan ❤️
 
-                        </h3>
+                        </span>
 
-                        <p class="gallery-subtitle">
+                    </footer>
 
-                            Setiap foto memiliki cerita,
-                            dan setiap cerita adalah bagian
-                            dari perjalanan kita.
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- Part 6 -->
+        <!-- ======================================================
+             OUR JOURNEY
+        ======================================================= -->
+
+        <section id="journey" class="journey-section" aria-labelledby="journey-title">
+
+            <div class="journey-container">
+
+                <!-- Journey Header -->
+
+                <header class="journey-header">
+
+                    <span class="journey-badge">
+
+                        ❤️ OUR JOURNEY ❤️
+
+                    </span>
+
+                    <h2 id="journey-title" class="journey-title">
+
+                        Semua Cerita Kita,
+                        Tersimpan Di Sini
+
+                    </h2>
+
+                    <p class="journey-subtitle">
+
+                        Setiap foto mempunyai cerita.
+                        Setiap cerita mempunyai kenangan.
+                        Dan setiap kenangan,
+                        selalu mempunyai tempat
+                        di dalam hatiku.
+
+                    </p>
+
+                </header>
+
+                <!-- Timeline -->
+
+                <nav class="journey-timeline" aria-label="Timeline Perjalanan">
+
+                </nav>
+
+                <!-- Memory List -->
+
+                <div id="memoryList" class="memory-list">
+
+                    <!--
+                        Memory Card
+                        Dibuat otomatis menggunakan JavaScript
+                    -->
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Part 7 -->
+        <!-- ======================================================
+             BIRTHDAY SECTION
+        ======================================================= -->
+
+        <section id="birthday" class="birthday-section" aria-labelledby="birthday-title">
+
+            <div class="birthday-container">
+
+                <!-- Birthday Header -->
+
+                <header class="birthday-header">
+
+                    <span class="birthday-badge">
+
+                        🎂 Happy Birthday 🎂
+
+                    </span>
+
+                    <h2 id="birthday-title" class="birthday-title">
+
+                        Selamat Ulang Tahun,
+                        Sayang ❤️
+
+                    </h2>
+
+                    <p class="birthday-subtitle">
+
+                        Terima kasih sudah menjadi
+                        bagian terindah dalam hidupku.
+
+                        Semoga setiap langkahmu
+                        selalu dipenuhi kebahagiaan,
+                        kesehatan,
+                        dan semua impianmu
+                        dapat terwujud.
+
+                    </p>
+
+                </header>
+
+                <!-- Birthday Card -->
+
+                <article class="birthday-card">
+
+                    <div class="birthday-content">
+
+                        <p class="birthday-message">
+
+                            Hari ini mungkin hanya
+                            satu hari dalam setahun.
+
+                            Tetapi bagiku...
+
+                            Hari ini adalah hari
+                            dimana seseorang yang
+                            paling berharga di hidupku
+                            dilahirkan.
+
+                        </p>
+
+                        <p class="birthday-message">
+
+                            Terima kasih sudah hadir.
+
+                            Terima kasih sudah bertahan.
+
+                            Terima kasih sudah menjadi
+                            alasan aku tersenyum
+                            setiap hari.
+
+                        </p>
+
+                        <p class="birthday-message">
+
+                            Aku mungkin belum bisa
+                            memberikan dunia.
+
+                            Tapi aku akan selalu
+                            berusaha memberikan
+                            yang terbaik untukmu.
 
                         </p>
 
                     </div>
 
-                    <!-- ================= SLIDER ================= -->
-
-                    <div class="slider">
-
-                        <div class="slides">
-
-                            <div class="slide active">
-
-                                <img src="./images/photo1.jpeg" alt="Kenangan 1">
-
-                                <div class="slide-caption">
-
-                                    ❤️ Kenangan Pertama
-
-                                </div>
-
-                            </div>
-
-                            <div class="slide">
-
-                                <img src="./images/photo2.jpeg" alt="Kenangan 2">
-
-                                <div class="slide-caption">
-
-                                    🌹 Momen Terindah
-
-                                </div>
-
-                            </div>
-
-                            <div class="slide">
-
-                                <img src="./images/photo3.jpeg" alt="Kenangan 3">
-
-                                <div class="slide-caption">
-
-                                    💖 Selalu Bersama
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <!-- Navigation -->
-
-                        <button class="prev" type="button" aria-label="Foto Sebelumnya">
-
-                            &#10094;
-
-                        </button>
-
-                        <button class="next" type="button" aria-label="Foto Berikutnya">
-
-                            &#10095;
-
-                        </button>
-
-                        <!-- Indicator -->
-
-                        <div class="dots">
-
-                            <span class="dot active"></span>
-
-                            <span class="dot"></span>
-
-                            <span class="dot"></span>
-
-                        </div>
-
-                        <!-- Counter -->
-
-                        <div class="slide-counter">
-
-                            <span id="currentSlide">
-
-                                1
-
-                            </span>
-
-                            /
-
-                            <span id="totalSlide">
-
-                                3
-
-                            </span>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <!-- ==========================================
-                     TIMELINE
-                =========================================== -->
-
-                <div class="timeline">
-
-                    <div class="timeline-header">
-
-                        <h3 class="timeline-title">
-
-                            ❤️ Perjalanan Kita
-
-                        </h3>
-
-                    </div>
-
-                    <div class="timeline-body">
-
-                        <div class="timeline-item">
-
-                            🌸 Pertama Bertemu
-
-                        </div>
-
-                        <div class="timeline-item">
-
-                            🌹 Pertama Jalan Bersama
-
-                        </div>
-
-                        <div class="timeline-item">
-
-                            💕 Menjadi Kita
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <!-- ==========================================
-                     LOVE COUNTER
-                =========================================== -->
-
-                <div class="love-counter">
-
-                    <h3 class="counter-title">
-
-                        ❤️ Bersama Selama
-
-                    </h3>
-
-                    <div id="daysTogether">
-
-                        000 Hari
-
-                    </div>
-
-                </div>
-
-                <!-- ==========================================
-                     LOVE QUOTE
-                =========================================== -->
-
-                <div class="quote-box">
-
-                    <blockquote id="loveQuote">
-
-                        "Terima kasih telah menjadi bagian
-                        terindah dalam hidupku."
-
-                    </blockquote>
-
-                </div>
-
-                <!-- ==========================================
-                     SIGNATURE
-                =========================================== -->
-
-                <div class="letter-footer">
-
-                    <span>
-
-                        Dengan Cinta,
-
-                    </span>
-
-                    <h3>
-
-                        Raihan ❤️
-
-                    </h3>
-
-                </div>
+                </article>
 
             </div>
 
         </section>
-        <!-- ==========================================
+
+        <!-- ======================================================
+             THANK YOU
+        ======================================================= -->
+
+        <section id="thankyou" class="thankyou-section" aria-labelledby="thankyou-title">
+
+            <div class="thankyou-container">
+
+                <h2 id="thankyou-title" class="thankyou-title">
+
+                    Terima Kasih ❤️
+
+                </h2>
+
+                <p class="thankyou-text">
+
+                    Terima kasih sudah
+                    membaca semua cerita ini.
+
+                    Semoga setiap kenangan
+                    yang ada di website ini
+                    selalu mengingatkan bahwa
+                    aku akan terus memilihmu,
+                    hari ini,
+                    besok,
+                    dan seterusnya.
+
+                </p>
+
+                <button id="finishBtn" class="primary-btn" type="button">
+
+                    ❤️ I Love You ❤️
+
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- Part 8 -->
+        <!-- ======================================================
              MUSIC PLAYER
-        =========================================== -->
+        ======================================================= -->
 
-        <div class="music-player">
+        <section id="music" class="music-section" aria-labelledby="music-title">
 
-            <button id="musicBtn" class="music-button" type="button" aria-label="Play Music">
-                🎵
-            </button>
+            <div class="music-container">
 
-            <audio id="music" preload="auto" loop>
+                <!-- Header -->
 
-                <source src="./music/music.mp3" type="audio/mp3">
+                <header class="music-header">
 
-            </audio>
+                    <span class="music-badge">
 
-        </div>
+                        🎵 Our Playlist 🎵
 
-    </main>
+                    </span>
 
-    <!-- ================ LIGHTBOX ================ -->
+                    <h2 id="music-title" class="music-title">
 
-    <div id="lightbox" class="hidden">
+                        Lagu Yang Menemani
+                        Cerita Kita
 
-        <div class="lightbox-content">
+                    </h2>
 
-            <button id="closeLightbox" class="close-lightbox" type="button">
+                    <p class="music-subtitle">
+
+                        Setiap lagu mempunyai
+                        kenangannya sendiri.
+
+                        Biarkan musik
+                        menemani setiap cerita
+                        yang ada di website ini.
+
+                    </p>
+
+                </header>
+
+                <!-- Player -->
+
+                <div class="music-player">
+
+                    <button id="prevSongBtn" class="music-btn" type="button" aria-label="Lagu sebelumnya">
+
+                        ⏮
+
+                    </button>
+
+                    <button id="playSongBtn" class="music-btn music-play" type="button"
+                        aria-label="Putar atau jeda lagu">
+
+                        ▶
+
+                    </button>
+
+                    <button id="nextSongBtn" class="music-btn" type="button" aria-label="Lagu berikutnya">
+
+                        ⏭
+
+                    </button>
+
+                </div>
+
+                <!-- Song Info -->
+
+                <div class="music-info">
+
+                    <h3 id="songTitle" class="song-title">
+
+                        Waiting...
+
+                    </h3>
+
+                    <p id="songArtist" class="song-artist">
+
+                        Love Playlist
+
+                    </p>
+
+                </div>
+
+                <!-- Progress -->
+
+                <div class="music-progress">
+
+                    <span id="currentTime">
+
+                        00:00
+
+                    </span>
+
+                    <div class="progress-bar">
+
+                        <div id="progressFill" class="progress-fill">
+
+                        </div>
+
+                    </div>
+
+                    <span id="duration">
+
+                        00:00
+
+                    </span>
+
+                </div>
+
+                <!-- Hidden Audio -->
+
+                <audio id="audioPlayer" preload="metadata">
+
+                </audio>
+
+            </div>
+
+        </section>
+
+        <!-- Part 9 -->
+        <!-- ======================================================
+             FINAL MESSAGE
+        ======================================================= -->
+
+        <section id="final-message" class="final-message-section" aria-labelledby="final-message-title">
+
+            <div class="final-message-container">
+
+                <!-- Header -->
+
+                <header class="final-message-header">
+
+                    <span class="final-message-badge">
+
+                        ❤️ One Last Message ❤️
+
+                    </span>
+
+                    <h2 id="final-message-title" class="final-message-title">
+
+                        Sebelum Website Ini Berakhir...
+
+                    </h2>
+
+                </header>
+
+                <!-- Message Card -->
+
+                <article class="final-message-card">
+
+                    <div id="finalMessage" class="final-message-content">
+
+                        <!--
+                            Final message akan dimuat
+                            melalui JavaScript
+                        -->
+
+                    </div>
+
+                </article>
+
+                <!-- Quote -->
+
+                <blockquote class="love-quote">
+
+                    <p>
+
+                        "Terima kasih sudah menjadi
+                        bagian terindah
+                        dalam hidupku."
+
+                    </p>
+
+                </blockquote>
+
+                <!-- Closing -->
+
+                <div class="final-message-action">
+
+                    <button id="finishJourneyBtn" class="primary-btn" type="button">
+
+                        ❤️ Finish Our Journey ❤️
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ======================================================
+             FOOTER
+        ======================================================= -->
+
+        <footer class="footer">
+
+            <div class="footer-container">
+
+                <p class="footer-text">
+
+                    Made with ❤️
+                    especially for you.
+
+                </p>
+
+                <p class="footer-copy">
+
+                    © 2027
+                    Our Journey.
+                    All memories reserved.
+
+                </p>
+
+            </div>
+
+        </footer>
+
+        <!-- Part 10 -->
+        <!-- ======================================================
+             LIGHTBOX
+        ======================================================= -->
+
+        <div id="lightbox" class="lightbox" aria-hidden="true">
+
+            <button id="closeLightboxBtn" class="lightbox-close" type="button" aria-label="Tutup foto">
 
                 ✕
 
             </button>
 
-            <img id="lightboxImg" src="" alt="Preview Foto">
+            <button id="prevImageBtn" class="lightbox-nav lightbox-prev" type="button" aria-label="Foto sebelumnya">
 
-            <p id="lightboxCaption">
+                ❮
 
-                Kenangan Kita ❤️
+            </button>
 
-            </p>
+            <img id="lightboxImage" class="lightbox-image" src="" alt="Memory">
 
-        </div>
+            <button id="nextImageBtn" class="lightbox-nav lightbox-next" type="button" aria-label="Foto berikutnya">
 
-    </div>
+                ❯
 
-    <!-- ================= TIMELINE ================= -->
-
-    <section id="timeline" class="timeline-section">
-
-        <div class="timeline-header">
-
-            <span class="timeline-icon">❤️</span>
-
-            <h2 class="timeline-title">
-                Perjalanan Kita
-            </h2>
-
-            <p class="timeline-subtitle">
-                Semua berawal dari sebuah pertemuan kecil,
-                hingga menjadi cerita yang tak ingin aku akhiri.
-            </p>
+            </button>
 
         </div>
 
-        <div class="timeline">
+        <!-- ======================================================
+             JAVASCRIPT
+        ======================================================= -->
 
-            <div class="timeline-item left">
+        <script src="data/memories.js"></script>
 
-                <div class="timeline-content">
+        <script src="data/playlist.js"></script>
 
-                    <span class="timeline-date">
-                        01 Januari 2025
-                    </span>
+        <script src="data/birthday.js"></script>
 
-                    <h3>Pertama Kali Berkenalan</h3>
+        <script src="js/loading.js"></script>
 
-                    <p>
-                        Hari dimana semuanya dimulai.
-                        Siapa sangka sebuah sapaan sederhana
-                        bisa menjadi cerita sepanjang ini.
-                    </p>
+        <script src="js/opening.js"></script>
 
-                </div>
+        <script src="js/hero.js"></script>
 
-            </div>
+        <script src="js/gift.js"></script>
 
-            <div class="timeline-item right">
+        <script src="js/envelope.js"></script>
 
-                <div class="timeline-content">
+        <script src="js/letter.js"></script>
 
-                    <span class="timeline-date">
-                        15 Januari 2025
-                    </span>
+        <script src="js/journey.js"></script>
 
-                    <h3>Pertama Jalan Bersama</h3>
+        <script src="js/birthday.js"></script>
 
-                    <p>
-                        Hari pertama kita menghabiskan waktu bersama,
-                        penuh tawa dan cerita yang masih kuingat sampai sekarang.
-                    </p>
+        <script src="js/music.js"></script>
 
-                </div>
+        <script src="js/lightbox.js"></script>
 
-            </div>
+        <script src="js/ui.js"></script>
 
-            <div class="timeline-item left">
-
-                <div class="timeline-content">
-
-                    <span class="timeline-date">
-                        14 Februari 2025
-                    </span>
-
-                    <h3>Menjadi Kita ❤️</h3>
-
-                    <p>
-                        Sejak hari itu,
-                        aku tahu kalau aku ingin terus berjalan bersamamu.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- =================== FOOTER ===================== -->
-
-    <footer id="footer">
-
-        <div class="footer-container">
-
-            <div class="footer-content">
-
-                <h3>
-
-                    ❤️ Our Story ❤️
-
-                </h3>
-
-                <p>
-
-                    Website ini dibuat khusus
-                    untuk seseorang yang sangat berarti.
-
-                </p>
-
-                <small>
-
-                    Made with ❤️ by Raihan
-
-                </small>
-
-            </div>
-
-        </div>
-
-    </footer>
-
-    <!-- ==========================================
-         JAVASCRIPT
-    =========================================== -->
-
-    <script src="script.js"></script>
+        <script src="js/app.js"></script>
 
 </body>
 

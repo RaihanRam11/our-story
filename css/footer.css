@@ -1,0 +1,558 @@
+/* ==========================================================
+   FOOTER SECTION
+========================================================== */
+
+.footer {
+
+    position: relative;
+
+    padding: 120px 0 60px;
+
+    z-index: var(--z-content);
+
+}
+
+/* ==========================================================
+   FOOTER CONTAINER
+========================================================== */
+
+.footer-container {
+
+    width: min(1100px, 92%);
+
+    margin: 0 auto;
+
+}
+
+/* ==========================================================
+   FOOTER HEADER
+========================================================== */
+
+.footer-header {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+    gap: var(--space-md);
+
+    max-width: 760px;
+
+    margin: 0 auto 70px;
+
+}
+
+/*============= Part 2 ============= */
+/* ==========================================================
+   FOOTER BADGE
+========================================================== */
+
+.footer-badge {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 10px 22px;
+
+    border-radius: var(--radius-round);
+
+    background: rgba(255, 255, 255, .08);
+
+    border: 1px solid rgba(255, 255, 255, .12);
+
+    color: var(--white);
+
+    font-size: var(--font-sm);
+
+    font-weight: 600;
+
+    letter-spacing: .5px;
+
+}
+
+/* ==========================================================
+   FOOTER TITLE
+========================================================== */
+
+.footer-title {
+
+    font-size: clamp(2.4rem, 5vw, 3.3rem);
+
+    font-weight: 700;
+
+    line-height: 1.2;
+
+    letter-spacing: -.5px;
+
+    background: var(--gradient-title);
+
+    background-size: 300%;
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    animation: gradientFlow 8s linear infinite;
+
+}
+
+/* ==========================================================
+   FOOTER SUBTITLE
+========================================================== */
+
+.footer-subtitle {
+
+    max-width: 700px;
+
+    color: var(--text-light);
+
+    font-size: var(--font-lg);
+
+    line-height: 1.9;
+
+    letter-spacing: .2px;
+
+}
+
+/*============= Part 3 ============= */
+/* ==========================================================
+   FOOTER CONTENT
+========================================================== */
+
+.footer-content {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: var(--space-xl);
+
+    padding: 56px 40px;
+
+    border-radius: var(--radius-xl);
+
+    background: var(--glass-bg);
+
+    border: 1px solid var(--glass-border);
+
+    backdrop-filter: blur(var(--blur-card));
+
+    -webkit-backdrop-filter: blur(var(--blur-card));
+
+    box-shadow: var(--shadow-lg);
+
+    transition:
+        transform var(--transition-normal),
+        border-color var(--transition-normal),
+        box-shadow var(--transition-normal);
+
+    text-align: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+/* ==========================================================
+   FOOTER MESSAGE
+========================================================== */
+
+.footer-message {
+
+    max-width: 760px;
+
+    color: var(--text);
+
+    font-size: var(--font-lg);
+
+    line-height: 2;
+
+    letter-spacing: .2px;
+
+}
+
+/* ==========================================================
+   FOOTER DIVIDER
+========================================================== */
+
+.footer-divider {
+
+    width: min(260px, 70%);
+
+    height: 1px;
+
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, .35),
+            transparent);
+
+}
+
+/* ==========================================================
+   FOOTER SIGNATURE
+========================================================== */
+
+.footer-signature {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: var(--space-xs);
+
+}
+
+/* ==========================================================
+   FOOTER NAME
+========================================================== */
+
+.footer-name {
+
+    font-size: clamp(1.4rem, 3vw, 1.8rem);
+
+    font-weight: 700;
+
+    line-height: 1.3;
+
+    background: var(--gradient-title);
+
+    background-size: 300%;
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    animation: gradientFlow 8s linear infinite;
+
+}
+
+/* ==========================================================
+   FOOTER DATE
+========================================================== */
+
+.footer-date {
+
+    color: var(--text-light);
+
+    font-size: var(--font-sm);
+
+    letter-spacing: .2px;
+
+}
+
+/* ==========================================================
+   COPYRIGHT
+========================================================== */
+
+.footer-copyright {
+
+    color: var(--text-muted);
+
+    font-size: var(--font-xs);
+
+    letter-spacing: .3px;
+
+    line-height: 1.7;
+
+}
+
+/*============= Part 4 ============= */
+/* ==========================================================
+   FOOTER HOVER
+========================================================== */
+
+.footer-content:hover {
+
+    transform: translateY(-8px);
+
+    border-color: rgba(255, 255, 255, .22);
+
+    box-shadow:
+        0 28px 70px rgba(0, 0, 0, .35);
+
+}
+
+/* ==========================================================
+   ACTIVE STATE
+========================================================== */
+
+.footer-content.active {
+
+    border-color: rgba(255, 255, 255, .24);
+
+    box-shadow:
+        0 0 24px rgba(255, 92, 138, .30);
+
+}
+
+/* ==========================================================
+   ACCESSIBILITY
+========================================================== */
+
+.footer-content:focus-visible,
+
+.footer-content:focus-within {
+
+    outline: 3px solid rgba(255, 255, 255, .35);
+
+    outline-offset: 6px;
+
+}
+
+/* ==========================================================
+   REDUCED MOTION
+========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .footer-content,
+
+    .footer-title,
+
+    .footer-name {
+
+        animation: none !important;
+
+        transition: none !important;
+
+        transform: none !important;
+
+    }
+
+}
+
+/*============= Part 5 ============= */
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width: 1200px) {
+
+    .footer-container {
+
+        width: min(960px, 94%);
+
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .footer {
+
+        padding: 90px 0 50px;
+
+    }
+
+    .footer-header {
+
+        margin-bottom: 56px;
+
+    }
+
+    .footer-title {
+
+        font-size: clamp(2rem, 5vw, 2.6rem);
+
+    }
+
+    .footer-subtitle {
+
+        font-size: var(--font-md);
+
+    }
+
+    .footer-content {
+
+        padding: 44px 32px;
+
+        gap: var(--space-lg);
+
+    }
+
+    .footer-message {
+
+        font-size: var(--font-md);
+
+        line-height: 1.9;
+
+    }
+
+    .footer-name {
+
+        font-size: 1.5rem;
+
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .footer {
+
+        padding: 72px 0 40px;
+
+    }
+
+    .footer-container {
+
+        width: min(100%, calc(100% - 40px));
+
+    }
+
+    .footer-header {
+
+        gap: var(--space-sm);
+
+        margin-bottom: 42px;
+
+    }
+
+    .footer-title {
+
+        font-size: 1.8rem;
+
+    }
+
+    .footer-subtitle {
+
+        font-size: var(--font-sm);
+
+        line-height: 1.8;
+
+    }
+
+    .footer-content {
+
+        padding: 32px 24px;
+
+        gap: var(--space-md);
+
+        border-radius: var(--radius-lg);
+
+    }
+
+    .footer-message {
+
+        font-size: var(--font-sm);
+
+        line-height: 1.9;
+
+    }
+
+    .footer-name {
+
+        font-size: 1.3rem;
+
+    }
+
+    .footer-date {
+
+        font-size: var(--font-xs);
+
+    }
+
+    .footer-divider {
+
+        width: min(180px, 70%);
+
+    }
+
+    .footer-copyright {
+
+        font-size: var(--font-xs);
+
+    }
+
+}
+
+/*============= Part 6 ============= */
+/* ==========================================================
+   PRINT
+========================================================== */
+
+@media print {
+
+    .footer {
+
+        padding: 0;
+
+    }
+
+    .footer-container {
+
+        width: 100%;
+
+        max-width: 100%;
+
+    }
+
+    .footer-content {
+
+        padding: 24px;
+
+        background: #ffffff;
+
+        border: 1px solid #cccccc;
+
+        box-shadow: none;
+
+        backdrop-filter: none;
+
+        -webkit-backdrop-filter: none;
+
+        break-inside: avoid;
+
+        page-break-inside: avoid;
+
+    }
+
+    .footer-title,
+
+    .footer-name {
+
+        background: none;
+
+        -webkit-background-clip: initial;
+
+        -webkit-text-fill-color: initial;
+
+        color: #000000;
+
+        animation: none;
+
+    }
+
+    .footer-subtitle,
+
+    .footer-message,
+
+    .footer-date,
+
+    .footer-copyright {
+
+        color: #000000;
+
+    }
+
+    .footer-divider {
+
+        background: #cccccc;
+
+    }
+
+}

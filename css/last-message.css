@@ -1,8 +1,8 @@
 /* ==========================================================
-   TIMELINE SECTION
+   LAST MESSAGE SECTION
 ========================================================== */
 
-.timeline-section {
+.last-message-section {
 
     position: relative;
 
@@ -13,10 +13,10 @@
 }
 
 /* ==========================================================
-   TIMELINE CONTAINER
+   LAST MESSAGE CONTAINER
 ========================================================== */
 
-.timeline-container {
+.last-message-container {
 
     width: min(1100px, 92%);
 
@@ -25,10 +25,10 @@
 }
 
 /* ==========================================================
-   TIMELINE HEADER
+   LAST MESSAGE HEADER
 ========================================================== */
 
-.timeline-header {
+.last-message-header {
 
     display: flex;
 
@@ -46,13 +46,12 @@
 
 }
 
-
-/*======== Part 2 ======= */
+/* =========== Part 2 ========= */
 /* ==========================================================
-   TIMELINE BADGE
+   LAST MESSAGE BADGE
 ========================================================== */
 
-.timeline-badge {
+.last-message-badge {
 
     display: inline-flex;
 
@@ -81,10 +80,10 @@
 }
 
 /* ==========================================================
-   TIMELINE TITLE
+   LAST MESSAGE TITLE
 ========================================================== */
 
-.timeline-title {
+.last-message-title {
 
     font-size: clamp(2.4rem, 5vw, 3.3rem);
 
@@ -107,10 +106,10 @@
 }
 
 /* ==========================================================
-   TIMELINE SUBTITLE
+   LAST MESSAGE SUBTITLE
 ========================================================== */
 
-.timeline-subtitle {
+.last-message-subtitle {
 
     max-width: 700px;
 
@@ -124,81 +123,12 @@
 
 }
 
-/*======== Part 3 ======= */
+/* =========== Part 3 ========= */
 /* ==========================================================
-   TIMELINE
+   LAST MESSAGE CONTENT
 ========================================================== */
 
-.timeline {
-
-    position: relative;
-
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-    gap: var(--space-xl);
-
-    padding: 24px 0;
-
-    overflow-x: auto;
-
-    overflow-y: hidden;
-
-    scrollbar-width: none;
-
-    -ms-overflow-style: none;
-
-}
-
-.timeline::-webkit-scrollbar {
-
-    display: none;
-
-}
-
-/* ==========================================================
-   TIMELINE LINE
-========================================================== */
-
-.timeline::before {
-
-    content: "";
-
-    position: absolute;
-
-    left: 0;
-
-    right: 0;
-
-    top: 50%;
-
-    height: 3px;
-
-    transform: translateY(-50%);
-
-    background: linear-gradient(90deg,
-            var(--primary),
-            var(--primary-light),
-            var(--primary-soft));
-
-    opacity: .35;
-
-    z-index: 0;
-
-}
-
-/* ==========================================================
-   TIMELINE ITEM
-========================================================== */
-
-.timeline-item {
-
-    position: relative;
-
-    z-index: 1;
+.last-message-content {
 
     display: flex;
 
@@ -206,19 +136,71 @@
 
     align-items: center;
 
-    gap: var(--space-sm);
+    gap: var(--space-xl);
 
-    min-width: 120px;
+    padding: 56px 40px;
 
-    cursor: pointer;
+    border-radius: var(--radius-xl);
+
+    background: var(--glass-bg);
+
+    border: 1px solid var(--glass-border);
+
+    backdrop-filter: blur(var(--blur-card));
+
+    -webkit-backdrop-filter: blur(var(--blur-card));
+
+    box-shadow: var(--shadow-lg);
+
+    text-align: center;
 
 }
 
 /* ==========================================================
-   TIMELINE MARKER
+   LAST MESSAGE TEXT
 ========================================================== */
 
-.timeline-marker {
+.last-message-text {
+
+    max-width: 760px;
+
+    color: var(--text);
+
+    font-size: var(--font-lg);
+
+    line-height: 2;
+
+    letter-spacing: .2px;
+
+}
+
+/* ==========================================================
+   LAST MESSAGE HIGHLIGHT
+========================================================== */
+
+.last-message-highlight {
+
+    color: var(--white);
+
+    font-weight: 700;
+
+    background: var(--gradient-title);
+
+    background-size: 300%;
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    animation: gradientFlow 8s linear infinite;
+
+}
+
+/* ==========================================================
+   LOVE ICON
+========================================================== */
+
+.last-message-love {
 
     display: flex;
 
@@ -226,92 +208,94 @@
 
     align-items: center;
 
-    width: 52px;
+    font-size: 2.5rem;
 
-    height: 52px;
-
-    border-radius: 50%;
-
-    background: var(--glass-bg);
-
-    border: 2px solid var(--glass-border);
-
-    backdrop-filter: blur(var(--blur-card));
-
-    -webkit-backdrop-filter: blur(var(--blur-card));
-
-    box-shadow: var(--shadow-md);
+    line-height: 1;
 
     color: var(--white);
-
-    font-size: 1.2rem;
 
 }
 
 /* ==========================================================
-   TIMELINE LABEL
+   SIGNATURE
 ========================================================== */
 
-.timeline-label {
+.last-message-signature {
 
-    text-align: center;
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: var(--space-xs);
+
+}
+
+/* ==========================================================
+   SIGNATURE NAME
+========================================================== */
+
+.last-message-name {
+
+    font-size: clamp(1.4rem, 3vw, 1.8rem);
+
+    font-weight: 700;
+
+    line-height: 1.3;
+
+    background: var(--gradient-title);
+
+    background-size: 300%;
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    animation: gradientFlow 8s linear infinite;
+
+}
+
+/* ==========================================================
+   SIGNATURE DATE
+========================================================== */
+
+.last-message-date {
 
     color: var(--text-light);
 
     font-size: var(--font-sm);
 
-    font-weight: 500;
-
-    line-height: 1.5;
+    letter-spacing: .2px;
 
 }
 
-/*======== Part 4 ======= */
+/* =========== Part 4 ========= */
 /* ==========================================================
-   TIMELINE ITEM HOVER
+   LAST MESSAGE HOVER
 ========================================================== */
 
-.timeline-item:hover .timeline-marker {
+.last-message-content:hover {
 
-    transform: translateY(-6px);
+    transform: translateY(-8px);
+
+    border-color: rgba(255, 255, 255, .22);
+
+    box-shadow:
+        0 28px 70px rgba(0, 0, 0, .35);
+
+}
+
+/* ==========================================================
+   ACTIVE STATE
+========================================================== */
+
+.last-message-content.active {
 
     border-color: rgba(255, 255, 255, .24);
 
     box-shadow:
-        0 20px 50px rgba(255, 92, 138, .25);
-
-}
-
-.timeline-item:hover .timeline-label {
-
-    color: var(--white);
-
-}
-
-/* ==========================================================
-   ACTIVE ITEM
-========================================================== */
-
-.timeline-item.active .timeline-marker {
-
-    background: var(--gradient-primary);
-
-    border-color: transparent;
-
-    color: var(--white);
-
-    transform: scale(1.08);
-
-    box-shadow:
-        0 0 24px rgba(255, 92, 138, .40);
-
-}
-
-.timeline-item.active .timeline-label {
-
-    color: var(--white);
-
-    font-weight: 600;
+        0 0 24px rgba(255, 92, 138, .30);
 
 }
 
@@ -319,13 +303,13 @@
    ACCESSIBILITY
 ========================================================== */
 
-.timeline-item:focus-visible {
+.last-message-content:focus-visible,
+
+.last-message-content:focus-within {
 
     outline: 3px solid rgba(255, 255, 255, .35);
 
     outline-offset: 6px;
-
-    border-radius: var(--radius-md);
 
 }
 
@@ -335,11 +319,11 @@
 
 @media (prefers-reduced-motion: reduce) {
 
-    .timeline-item,
+    .last-message-content,
 
-    .timeline-marker,
+    .last-message-highlight,
 
-    .timeline-label {
+    .last-message-name {
 
         animation: none !important;
 
@@ -351,14 +335,14 @@
 
 }
 
-/*======== Part 5 ======= */
+/* =========== Part 5 ========= */
 /* ==========================================================
    RESPONSIVE
 ========================================================== */
 
 @media (max-width: 1200px) {
 
-    .timeline-container {
+    .last-message-container {
 
         width: min(960px, 94%);
 
@@ -368,57 +352,55 @@
 
 @media (max-width: 768px) {
 
-    .timeline-section {
+    .last-message-section {
 
         padding: 90px 0;
 
     }
 
-    .timeline-header {
+    .last-message-header {
 
         margin-bottom: 56px;
 
     }
 
-    .timeline-title {
+    .last-message-title {
 
         font-size: clamp(2rem, 5vw, 2.6rem);
 
     }
 
-    .timeline-subtitle {
+    .last-message-subtitle {
 
         font-size: var(--font-md);
 
     }
 
-    .timeline {
+    .last-message-content {
+
+        padding: 44px 32px;
 
         gap: var(--space-lg);
 
-        padding: 20px 0;
+    }
+
+    .last-message-text {
+
+        font-size: var(--font-md);
+
+        line-height: 1.9;
 
     }
 
-    .timeline-item {
+    .last-message-love {
 
-        min-width: 96px;
-
-    }
-
-    .timeline-marker {
-
-        width: 46px;
-
-        height: 46px;
-
-        font-size: 1.05rem;
+        font-size: 2.2rem;
 
     }
 
-    .timeline-label {
+    .last-message-name {
 
-        font-size: var(--font-xs);
+        font-size: 1.5rem;
 
     }
 
@@ -426,19 +408,19 @@
 
 @media (max-width: 480px) {
 
-    .timeline-section {
+    .last-message-section {
 
         padding: 72px 0;
 
     }
 
-    .timeline-container {
+    .last-message-container {
 
         width: min(100%, calc(100% - 40px));
 
     }
 
-    .timeline-header {
+    .last-message-header {
 
         gap: var(--space-sm);
 
@@ -446,13 +428,13 @@
 
     }
 
-    .timeline-title {
+    .last-message-title {
 
         font-size: 1.8rem;
 
     }
 
-    .timeline-subtitle {
+    .last-message-subtitle {
 
         font-size: var(--font-sm);
 
@@ -460,56 +442,58 @@
 
     }
 
-    .timeline {
+    .last-message-content {
 
-        justify-content: flex-start;
+        padding: 32px 24px;
 
         gap: var(--space-md);
 
-        padding: 16px 0;
+        border-radius: var(--radius-lg);
 
     }
 
-    .timeline-item {
+    .last-message-text {
 
-        min-width: 80px;
+        font-size: var(--font-sm);
 
-    }
-
-    .timeline-marker {
-
-        width: 40px;
-
-        height: 40px;
-
-        font-size: .95rem;
+        line-height: 1.9;
 
     }
 
-    .timeline-label {
+    .last-message-love {
 
-        font-size: .72rem;
+        font-size: 2rem;
 
-        line-height: 1.4;
+    }
+
+    .last-message-name {
+
+        font-size: 1.3rem;
+
+    }
+
+    .last-message-date {
+
+        font-size: var(--font-xs);
 
     }
 
 }
 
-/*======== Part 6 ======= */
+/* =========== Part 6 ========= */
 /* ==========================================================
    PRINT
 ========================================================== */
 
 @media print {
 
-    .timeline-section {
+    .last-message-section {
 
         padding: 0;
 
     }
 
-    .timeline-container {
+    .last-message-container {
 
         width: 100%;
 
@@ -517,35 +501,11 @@
 
     }
 
-    .timeline {
+    .last-message-content {
 
-        justify-content: flex-start;
-
-        overflow: visible;
-
-        gap: 20px;
-
-        padding: 0;
-
-    }
-
-    .timeline::before {
-
-        display: none;
-
-    }
-
-    .timeline-item {
-
-        min-width: auto;
-
-    }
-
-    .timeline-marker {
+        padding: 24px;
 
         background: #ffffff;
-
-        color: #000000;
 
         border: 1px solid #cccccc;
 
@@ -555,12 +515,40 @@
 
         -webkit-backdrop-filter: none;
 
+        break-inside: avoid;
+
+        page-break-inside: avoid;
+
     }
 
-    .timeline-label {
+    .last-message-title,
+
+    .last-message-highlight,
+
+    .last-message-name {
+
+        background: none;
+
+        -webkit-background-clip: initial;
+
+        -webkit-text-fill-color: initial;
+
+        color: #000000;
+
+        animation: none;
+
+    }
+
+    .last-message-subtitle,
+
+    .last-message-text,
+
+    .last-message-date {
 
         color: #000000;
 
     }
 
 }
+
+/* ==================== Part 
