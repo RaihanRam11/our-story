@@ -25,11 +25,9 @@
             #090b18 100%);
 
     backdrop-filter: blur(25px);
-
     -webkit-backdrop-filter: blur(25px);
 
     opacity: 1;
-
     visibility: visible;
 
     z-index: var(--z-loading);
@@ -39,6 +37,7 @@
         visibility var(--transition-slow);
 
 }
+
 
 /* ==========================================================
    LOADING CONTENT
@@ -63,19 +62,18 @@
     background: var(--glass-bg);
 
     backdrop-filter: blur(var(--blur-card));
-
     -webkit-backdrop-filter: blur(var(--blur-card));
 
     box-shadow: var(--shadow-lg);
 
 }
 
+
 /* ==========================================================
    DECORATION GLOW
 ========================================================== */
 
 .loading-content::before,
-
 .loading-content::after {
 
     content: "";
@@ -84,13 +82,14 @@
 
     border-radius: 50%;
 
-    filter: blur(100px);
-
     pointer-events: none;
 
     z-index: var(--z-background);
 
+    filter: blur(100px);
+
 }
+
 
 .loading-content::before {
 
@@ -105,6 +104,7 @@
     background: rgba(255, 92, 138, .25);
 
 }
+
 
 .loading-content::after {
 
@@ -136,6 +136,7 @@
 
 }
 
+
 .loader-heart {
 
     font-size: 4.375rem;
@@ -147,11 +148,12 @@
     filter:
         drop-shadow(0 0 12px rgba(255, 92, 138, .70)) drop-shadow(0 0 30px rgba(255, 92, 138, .45));
 
-    animation: heartbeat 1.5s infinite;
+    animation: heartbeat 1.5s ease-in-out infinite;
 
     will-change: transform;
 
 }
+
 
 /* ==========================================================
    TITLE
@@ -161,15 +163,16 @@
 
     margin-bottom: var(--space-md);
 
+    color: var(--white);
+
     font-size: var(--font-2xl);
 
     font-weight: 700;
 
     line-height: 1.4;
 
-    color: var(--white);
-
 }
+
 
 /* ==========================================================
    SUBTITLE
@@ -179,16 +182,16 @@
 
     margin-bottom: var(--space-xl);
 
+    color: var(--text-light);
+
     font-size: var(--font-md);
 
     line-height: 1.8;
 
-    color: var(--text-light);
-
 }
 
 /* ==========================================================
-   PROGRESS BAR
+   PROGRESS
 ========================================================== */
 
 .loading-progress {
@@ -207,11 +210,11 @@
 
     overflow: hidden;
 
+    border: 1px solid rgba(255, 255, 255, .08);
+
     border-radius: var(--radius-round);
 
     background: rgba(255, 255, 255, .08);
-
-    border: 1px solid rgba(255, 255, 255, .08);
 
 }
 
@@ -219,9 +222,7 @@
 
     position: absolute;
 
-    top: 0;
-
-    left: 0;
+    inset: 0 auto 0 0;
 
     width: 0;
 
@@ -229,14 +230,23 @@
 
     border-radius: inherit;
 
-    background: linear-gradient(90deg,
+    background:
+
+        linear-gradient(90deg,
+
             var(--primary),
+
             var(--primary-light),
+
             var(--primary-soft));
 
-    box-shadow: 0 0 20px rgba(255, 92, 138, .45);
+    box-shadow:
 
-    transition: width .25s linear;
+        0 0 20px rgba(255, 92, 138, .45);
+
+    transition:
+
+        width .25s linear;
 
 }
 
@@ -261,7 +271,7 @@
 }
 
 /* ==========================================================
-   INFORMATION
+   LOADING INFORMATION
 ========================================================== */
 
 .loading-percent {
@@ -270,13 +280,13 @@
 
     margin-top: var(--space-lg);
 
+    color: var(--primary);
+
     font-size: var(--font-lg);
 
     font-weight: 700;
 
     letter-spacing: 2px;
-
-    color: var(--primary);
 
 }
 
@@ -284,16 +294,16 @@
 
     margin-top: var(--space-lg);
 
+    color: var(--text-light);
+
     font-size: var(--font-sm);
 
     line-height: 1.7;
 
-    color: var(--text-light);
-
 }
 
 /* ==========================================================
-   LOADING HIDDEN STATE
+   HIDDEN STATE
 ========================================================== */
 
 #loading.hide {
@@ -314,6 +324,10 @@
 
     .loading-content {
 
+        width: 100%;
+
+        max-width: 450px;
+
         padding: 40px 30px;
 
     }
@@ -332,11 +346,22 @@
 
 }
 
+
 @media (max-width: 480px) {
+
+    #loading {
+
+        padding: var(--space-lg);
+
+    }
 
     .loading-content {
 
+        width: 100%;
+
         padding: 30px 20px;
+
+        border-radius: var(--radius-lg);
 
     }
 
@@ -356,11 +381,47 @@
 
         font-size: var(--font-sm);
 
+        line-height: 1.6;
+
+    }
+
+    .loading-percent {
+
+        font-size: var(--font-md);
+
+        letter-spacing: 1px;
+
+    }
+
+    .loading-message {
+
+        font-size: calc(var(--font-sm) - 1px);
+
     }
 
     .loading-bar {
 
         height: 12px;
+
+    }
+
+}
+
+/* ==========================================================
+   ACCESSIBILITY
+========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .loader-heart {
+
+        animation: none;
+
+    }
+
+    .loading-fill {
+
+        transition: none;
 
     }
 
